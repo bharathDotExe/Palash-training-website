@@ -1,0 +1,150 @@
+.booking-section {
+    background: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: linear-gradient(135deg, var(--text-dark), #2a245c);
+    border: none;
+    overflow: hidden;
+    padding: 0;
+}
+
+.booking-content {
+    padding: 40px;
+    color: var(--white);
+}
+
+.booking-content .section-title {
+    color: var(--white);
+}
+
+.booking-subtitle {
+    color: var(--glass-bg);
+    margin-bottom: 40px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--palash-orange);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+/* Floating label effect */
+.form-group input:focus~label,
+.form-group input:not(:placeholder-shown)~label {
+    top: -10px;
+    left: 15px;
+    font-size: 0.8rem;
+    background: var(--text-dark);
+    padding: 0 5px;
+    color: var(--palash-orange);
+    border-radius: 4px;
+}
+
+.form-group select option {
+    color: var(--text-dark);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.booking-graphics {
+    position: relative;
+    background: var(--palash-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.graphic-element {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--white), transparent);
+    opacity: 0.2;
+}
+
+.circle-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+}
+
+.circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    left: -50px;
+}
+
+.glass-pane {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: var(--white);
+    z-index: 10;
+    max-width: 80%;
+}
+
+/* @media */ (max-width: 900px) {
+    .booking-container {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-graphics {
+        min-height: 300px;
+    }
+
+    .booking-content {
+        padding: 40px 20px;
+    }
+}
+
+

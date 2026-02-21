@@ -1,0 +1,65 @@
+.cta-banner-section {
+    background: var(--bg-color);
+    position: relative;
+}
+
+.cta-banner-content {
+    background: linear-gradient(135deg, var(--palash-orange), var(--palash-red));
+    border-radius: 30px;
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-text {
+    max-width: 600px;
+    position: relative;
+    z-index: 10;
+}
+
+.cta-text h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.cta-text p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.cta-actions {
+    position: relative;
+    z-index: 10;
+}
+
+.banner-graphics {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* @media */ (max-width: 900px) {
+    .cta-banner-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 30px;
+        gap: 30px;
+    }
+
+    .cta-text h2 {
+        font-size: 1.8rem;
+    }
+}
+
+

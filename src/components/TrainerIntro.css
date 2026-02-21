@@ -1,0 +1,151 @@
+.trainer-section {
+    background-color: var(--white);
+    position: relative;
+}
+
+.trainer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.trainer-image-col {
+    position: relative;
+}
+
+.trainer-photo-container {
+    padding: 15px;
+    border-radius: 20px;
+    position: relative;
+    background: var(--bg-color);
+}
+
+.trainer-img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--white);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--palash-orange);
+}
+
+.experience-badge .years {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.trainer-name {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.trainer-bio {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.trainer-highlights {
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.trainer-highlights li {
+    color: var(--text-dark);
+}
+
+/* @media */ (max-width: 992px) {
+    .trainer-content {
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .trainer-name {
+        font-size: 1.2rem;
+    }
+
+    .trainer-bio {
+        font-size: 0.9rem;
+    }
+
+    .trainer-highlights {
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+
+    .experience-badge {
+        padding: 10px 15px;
+        bottom: -10px;
+        right: -10px;
+    }
+
+    .experience-badge .years {
+        font-size: 1.5rem;
+    }
+}
+
+/* @media */ (max-width: 600px) {
+    .trainer-content {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 15px;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .trainer-name {
+        font-size: 1rem;
+    }
+
+    .trainer-bio {
+        display: none;
+        /* Hide for extreme desktop-style row layout */
+    }
+
+    .trainer-highlights {
+        font-size: 0.7rem;
+    }
+
+    .experience-badge {
+        display: none;
+        /* Hide on super small to keep layout clean */
+    }
+}
+
+
