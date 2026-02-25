@@ -94,19 +94,5 @@
     gap: 10px;
 }
 
-/* @media */ (max-width: 768px) {
-    .community-section .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .community-section .section-header h2 {
-        font-size: 2.2rem;
-        width: 100%;
-    }
-}
 
 

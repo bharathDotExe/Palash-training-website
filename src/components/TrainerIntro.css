@@ -85,67 +85,34 @@
     color: var(--text-dark);
 }
 
-/* @media */ (max-width: 992px) {
+@media (max-width: 768px) {
     .trainer-content {
-        grid-template-columns: 0.8fr 1.2fr;
-        gap: 20px;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .trainer-name {
-        font-size: 1.2rem;
-    }
-
-    .trainer-bio {
-        font-size: 0.9rem;
-    }
-
-    .trainer-highlights {
-        font-size: 0.8rem;
-        gap: 8px;
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .experience-badge {
-        padding: 10px 15px;
-        bottom: -10px;
-        right: -10px;
-    }
-
-    .experience-badge .years {
-        font-size: 1.5rem;
-    }
-}
-
-/* @media */ (max-width: 600px) {
-    .trainer-content {
-        grid-template-columns: 1fr 1.5fr;
-        gap: 15px;
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .section-title {
-        font-size: 1.2rem;
+        font-size: 2rem;
+        text-align: center;
     }
 
-    .trainer-name {
-        font-size: 1rem;
-    }
-
+    .trainer-name,
     .trainer-bio {
-        display: none;
-        /* Hide for extreme desktop-style row layout */
+        text-align: center;
     }
 
-    .trainer-highlights {
-        font-size: 0.7rem;
-    }
-
-    .experience-badge {
-        display: none;
-        /* Hide on super small to keep layout clean */
+    .trainer-image-col {
+        order: -1;
+        /* Make image appear first on mobile */
     }
 }
-
-

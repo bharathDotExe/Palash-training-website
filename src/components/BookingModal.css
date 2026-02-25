@@ -92,14 +92,5 @@
     }
 }
 
-/* @media */ (max-width: 600px) {
-    .modal-content {
-        padding: 30px 20px;
-    }
-
-    .modal-title {
-        font-size: 1.8rem;
-    }
-}
 
 

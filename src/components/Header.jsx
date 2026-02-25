@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Phone, Mail, Facebook, Instagram, Linkedin, Twitter, Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 export default function Header({ onBookDemo }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
@@ -12,6 +13,10 @@ export default function Header({ onBookDemo }) {
   const handleBookDemo = () => {
     closeMobileMenu();
     onBookDemo();
+  };
+
+  const isActive = (path) => {
+    return location.pathname === path ? 'active' : '';
   };
 
   return (
@@ -45,27 +50,47 @@ export default function Header({ onBookDemo }) {
             </div>
           </Link>
 
-          <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
-            <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
-            <li><Link to="/services" onClick={closeMobileMenu}>Services</Link></li>
-            <li><Link to="/about" onClick={closeMobileMenu}>About Trainer</Link></li>
-            <li><Link to="/testimonials" onClick={closeMobileMenu}>Testimonials</Link></li>
-            <li><Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link></li>
-            <li><Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li>
-            <li><Link to="/forum" onClick={closeMobileMenu}>Forum</Link></li>
-            <li className="mobile-only-item">
-              <button className="btn btn-primary nav-cta-mobile" onClick={handleBookDemo}>Book Demo</button>
-            </li>
+          <ul className="nav-links">
+            <li><Link to="/" className={isActive('/')} onClick={closeMobileMenu}>Home</Link></li>
+            <li><Link to="/services" className={isActive('/services')} onClick={closeMobileMenu}>Services</Link></li>
+            <li><Link to="/about" className={isActive('/about')} onClick={closeMobileMenu}>About Trainer</Link></li>
+            <li><Link to="/testimonials" className={isActive('/testimonials')} onClick={closeMobileMenu}>Testimonials</Link></li>
+            <li><Link to="/gallery" className={isActive('/gallery')} onClick={closeMobileMenu}>Gallery</Link></li>
+            <li><Link to="/blog" className={isActive('/blog')} onClick={closeMobileMenu}>Blog</Link></li>
+            <li><Link to="/forum" className={isActive('/forum')} onClick={closeMobileMenu}>Forum</Link></li>
+            <li><Link to="/contact" className={isActive('/contact')} onClick={closeMobileMenu}>Contact</Link></li>
           </ul>
 
           <div className="nav-actions">
             <button className="btn btn-primary nav-cta desktop-only" onClick={onBookDemo}>Book Demo</button>
             <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
-              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              <Menu size={28} />
             </button>
           </div>
         </div>
       </nav>
+
+      {/* Separate Mobile Menu Overlay */}
+      <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}>
+        <div className="mobile-menu-header">
+          <button className="mobile-menu-close" onClick={closeMobileMenu}>
+            <X size={28} />
+          </button>
+        </div>
+        <ul className="mobile-nav-links">
+          <li><Link to="/" className={isActive('/')} onClick={closeMobileMenu}>Home</Link></li>
+          <li><Link to="/services" className={isActive('/services')} onClick={closeMobileMenu}>Services</Link></li>
+          <li><Link to="/about" className={isActive('/about')} onClick={closeMobileMenu}>About Trainer</Link></li>
+          <li><Link to="/testimonials" className={isActive('/testimonials')} onClick={closeMobileMenu}>Testimonials</Link></li>
+          <li><Link to="/gallery" className={isActive('/gallery')} onClick={closeMobileMenu}>Gallery</Link></li>
+          <li><Link to="/blog" className={isActive('/blog')} onClick={closeMobileMenu}>Blog</Link></li>
+          <li><Link to="/forum" className={isActive('/forum')} onClick={closeMobileMenu}>Forum</Link></li>
+          <li><Link to="/contact" className={isActive('/contact')} onClick={closeMobileMenu}>Contact</Link></li>
+          <li className="mobile-only-item">
+            <button className="btn btn-primary nav-cta-mobile" onClick={handleBookDemo}>Book Demo</button>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }

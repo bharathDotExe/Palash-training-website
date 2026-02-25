@@ -33,6 +33,7 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg-color);
@@ -116,5 +117,3 @@ h6 {
 .section-padding {
   padding: 50px 0;
 }
-
-

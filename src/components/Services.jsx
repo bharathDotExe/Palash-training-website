@@ -47,9 +47,11 @@ export default function Services() {
                             <div className={`icon-wrapper ${service.color}`}>
                                 {service.icon}
                             </div>
-                            <h3 className="service-title">{service.title}</h3>
-                            <p className="service-desc">{service.description}</p>
-                            <button className="service-link text-gradient">Learn More →</button>
+                            <div className="service-content">
+                                <h3 className="service-title">{service.title}</h3>
+                                <p className="service-desc">{service.description}</p>
+                                <button className="service-link text-gradient">Learn More →</button>
+                            </div>
                         </div>
                     ))}
                 </div>

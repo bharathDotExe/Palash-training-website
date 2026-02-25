@@ -5,6 +5,7 @@
 
 .cta-banner-content {
     background: linear-gradient(135deg, var(--palash-orange), var(--palash-red));
+    background-attachment: fixed;
     border-radius: 30px;
     padding: 60px 80px;
     display: flex;
@@ -49,17 +50,19 @@
     pointer-events: none;
 }
 
-/* @media */ (max-width: 900px) {
+@media (max-width: 768px) {
     .cta-banner-content {
         flex-direction: column;
+        padding: 40px 30px;
         text-align: center;
-        padding: 50px 30px;
-        gap: 30px;
+        gap: 20px;
     }
 
     .cta-text h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+
+    .banner-graphics {
+        display: none;
     }
 }
-
-
