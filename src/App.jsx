@@ -32,7 +32,7 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/forum" element={<ForumPage />} />
         <Route path="/contact" element={<ContactPage />} />
-      </Routes>
+      </Routes >
       <Footer />
       {isBookingModalOpen && <BookingModal onClose={toggleBookingModal} />}
     </>
