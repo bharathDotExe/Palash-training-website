@@ -11,6 +11,7 @@ import TestimonialsPage from './pages/TestimonialsPage';
 import SuccessStoriesPage from './pages/SuccessStoriesPage';
 import BlogPage from './pages/BlogPage';
 import ForumPage from './pages/ForumPage';
+import ContactPage from './pages/ContactPage';
 
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/success-stories" element={<SuccessStoriesPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/forum" element={<ForumPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
       {isBookingModalOpen && <BookingModal onClose={toggleBookingModal} />}

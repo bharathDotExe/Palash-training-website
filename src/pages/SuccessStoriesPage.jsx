@@ -50,8 +50,12 @@ export default function SuccessStoriesPage() {
                                 <span className="sp-edge-icon">03</span>
                                 <span>Interview Success</span>
                             </a>
-                            <a href="#video-testimonials" className={`sp-nav-edge ${activeSection === 'video-testimonials' ? 'active' : ''}`}>
+                            <a href="#story-leadership" className={`sp-nav-edge ${activeSection === 'story-leadership' ? 'active' : ''}`}>
                                 <span className="sp-edge-icon">04</span>
+                                <span>Influencing Leadership</span>
+                            </a>
+                            <a href="#video-testimonials" className={`sp-nav-edge ${activeSection === 'video-testimonials' ? 'active' : ''}`}>
+                                <span className="sp-edge-icon">05</span>
                                 <span>Video Stories</span>
                             </a>
                         </nav>
@@ -193,6 +197,40 @@ export default function SuccessStoriesPage() {
                                     <p className="sp-story-quote">"Where others see limitation, I build capability."</p>
                                 </div>
                             </div>
+
+                            {/* Story 4 */}
+                            <div id="story-leadership" className="sp-story-card glass" style={{ marginTop: '40px' }}>
+                                <div className="sp-story-content">
+                                    <h3 className="sp-story-title">Influencing Without Authority</h3>
+                                    <p className="sp-story-highlight">Leadership skills training</p>
+
+                                    <img src="/story4_leadership_training_1772281724654.png" alt="Corporate leadership training" className="sp-story-image float-left" />
+
+                                    <p>I was assigned a 1-week training session on Leadership Skills for three very senior officials. Age, experience, position, and industry exposure, they were far ahead of me. Each had spent over 25 years in the construction industry and had risen through sheer experience.</p>
+                                    <p>When I entered the room, the air felt heavy. Their body language was stiff. Their expressions showed reluctance. The unspoken question was clear, <em>“What can she possibly teach us?”</em></p>
+                                    <p>They did not understand why the organisation had nominated them. They did not believe they needed training. And they certainly did not believe I was at par with them to train them. It was indeed a challenge.</p>
+
+                                    <p>They avoided conversation. Engagement was minimal. I realised one thing immediately: they were already offended. The last thing I wanted was to make it worse.</p>
+
+                                    <h4>So, I changed my approach.</h4>
+                                    <p>Instead of creating a typical trainer–learner environment, I pulled a chair and sat beside them. No slides. No authority. No posturing.</p>
+
+                                    <p>I began by asking about their journey. Their projects, their milestones, their contributions to the industry. Slowly, the stiffness reduced. They spoke with pride about what they had built over the years.</p>
+
+                                    <p className="sp-story-quote">"And in that conversation, something shifted."</p>
+
+                                    <p>As they became comfortable, they began opening up about team challenges, communication gaps, generational differences, resistance from juniors, and internal conflicts. They gave me every answer I needed….without me asking a single confrontational question.</p>
+                                    <p>That discussion shaped my entire training plan. I assured them of one thing: This would not be a lecture. It would be a mutual learning and knowledge-sharing experience.</p>
+
+                                    <h4>Over the next 7 days, something remarkable happened.</h4>
+                                    <p>They began to see leadership beyond technical expertise. They recognised the importance of emotional intelligence, communication clarity, delegation, adaptability, and people management, even at the highest levels.</p>
+                                    <p>By the end of the program, they not only completed the training with engagement but also acknowledged the areas they needed to work on.</p>
+
+                                    <p>But the real validation came later. The same officials who were once reluctant recommended a batch of 20 senior team members for the same training. They didn’t just accept the program. They believed in it.</p>
+                                    <p>I worked with senior professionals to strengthen the one skill…but they left with many.</p>
+                                </div>
+                            </div>
+
                         </div>
 
                         {/* ── Video Testimonials ── */}
