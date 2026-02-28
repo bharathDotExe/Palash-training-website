@@ -40,6 +40,9 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 170px;
+  /* Account for fixed header plus sticky nav */
 }
 
 /* Glassmorphism Utilities */

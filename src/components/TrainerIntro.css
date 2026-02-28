@@ -1,119 +1,390 @@
+/* ─── About / Trainer Section ───────────────────────────────── */
 .trainer-section {
-    background-color: var(--white);
+    background-color: var(--bg-color);
     position: relative;
 }
 
-.trainer-content {
+/* ─── Page Header ──────────────────────────────────────────── */
+.about-page-header {
+    margin-bottom: 60px;
+}
+
+.about-eyebrow {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--palash-orange);
+    background: rgba(255, 94, 0, 0.09);
+    padding: 5px 16px;
+    border-radius: 50px;
+    margin-bottom: 14px;
+}
+
+.about-page-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 14px;
+    line-height: 1.15;
+}
+
+.about-tagline-hero {
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 600;
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ─── Hero Grid: Photo + Credentials ───────────────────────── */
+.about-hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    margin-bottom: 72px;
+    align-items: start;
 }
 
-.trainer-image-col {
-    position: relative;
+/* Photo Column */
+.about-photo-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .trainer-photo-container {
     padding: 15px;
     border-radius: 20px;
     position: relative;
-    background: var(--bg-color);
+    background: var(--white);
 }
 
 .trainer-img {
     width: 100%;
+    height: auto;
     border-radius: 12px;
     display: block;
+    object-fit: contain;
 }
 
 .experience-badge {
     position: absolute;
-    bottom: -20px;
-    right: -20px;
+    bottom: -16px;
+    right: -16px;
     background: var(--white);
-    padding: 20px 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 12px 18px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2px;
     border: 2px solid var(--palash-orange);
+    min-width: 160px;
+    text-align: center;
 }
 
-.experience-badge .years {
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.experience-badge .text {
+.badge-name {
     font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
-.section-title {
-    font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: 10px;
+    color: var(--text-dark);
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
-.trainer-name {
-    font-size: 1.5rem;
-    color: var(--text-light);
-    margin-bottom: 20px;
+.badge-role {
+    font-size: 0.72rem;
     font-weight: 500;
-}
-
-.trainer-bio {
-    font-size: 1.1rem;
     color: var(--text-light);
-    margin-bottom: 30px;
+    line-height: 1.2;
 }
 
-.trainer-highlights {
-    list-style: none;
-    font-size: 1.1rem;
-    font-weight: 500;
+.badge-exp {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 4px;
+}
+
+.about-highlights-card {
+    padding: 22px 24px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
-.trainer-highlights li {
+.highlight-item {
+    font-size: 0.95rem;
+    font-weight: 600;
     color: var(--text-dark);
+    line-height: 1.4;
 }
 
-@media (max-width: 768px) {
-    .trainer-content {
+/* Credentials Column */
+.about-credentials-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.credentials-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--palash-orange);
+}
+
+.cred-label-icon {
+    color: var(--palash-orange);
+}
+
+.credentials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.credential-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.credential-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 8px 24px rgba(255, 94, 0, 0.1);
+}
+
+.cred-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.credential-item p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+/* ─── Biography ────────────────────────────────────────────── */
+.about-bio-section {
+    margin-bottom: 60px;
+}
+
+.bio-section-label {
+    margin-bottom: 36px;
+}
+
+.bio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 44px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bio-para {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.85;
+}
+
+/* ─── Vision & Mission ────────────────────────────────────────── */
+.about-vision-mission-section {
+    margin-bottom: 72px;
+}
+
+.vision-mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.vm-card {
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vm-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.vm-icon {
+    color: var(--palash-orange);
+}
+
+.vm-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.vm-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1.05rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.vm-check {
+    color: var(--palash-orange);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+/* ─── Closing Quote ─────────────────────────────────────────── */
+.about-quote-block {
+    position: relative;
+    padding: 48px 56px;
+    text-align: center;
+    margin-bottom: 72px;
+    background: linear-gradient(135deg, rgba(255, 94, 0, 0.06), rgba(230, 42, 43, 0.06));
+    border: 1.5px solid rgba(255, 94, 0, 0.18);
+    overflow: hidden;
+}
+
+.quote-open-icon {
+    color: var(--palash-orange);
+    opacity: 0.35;
+    position: absolute;
+    top: 20px;
+    left: 24px;
+}
+
+.quote-close-icon {
+    color: var(--palash-orange);
+    opacity: 0.35;
+    position: absolute;
+    bottom: 20px;
+    right: 24px;
+    transform: rotate(180deg);
+}
+
+.about-quote-text {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--text-dark);
+    line-height: 1.8;
+    max-width: 780px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* ─── Session Focus ─────────────────────────────────────────── */
+.about-focus-section {
+    margin-bottom: 20px;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.focus-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 24px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.focus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(255, 94, 0, 0.1);
+}
+
+.focus-check {
+    color: var(--palash-orange);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.focus-card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+/* ─── Shared ────────────────────────────────────────────────── */
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .about-hero-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
     }
 
-    .experience-badge {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        margin-top: 20px;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
+    .vision-mission-grid {
+        grid-template-columns: 1fr;
     }
 
-    .section-title {
-        font-size: 2rem;
-        text-align: center;
+    .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .trainer-name,
-    .trainer-bio {
-        text-align: center;
+    .bio-content {
+        padding: 28px 24px;
     }
 
-    .trainer-image-col {
-        order: -1;
-        /* Make image appear first on mobile */
+    .about-quote-block {
+        padding: 40px 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-quote-block {
+        padding: 32px 20px;
+    }
+
+    .quote-open-icon,
+    .quote-close-icon {
+        display: none;
     }
 }
 
