@@ -20,7 +20,7 @@ export default function SuccessStoriesPage() {
     }, []);
 
     return (
-        <main className="success-page" style={{ paddingTop: '150px', minHeight: '80vh' }}>
+        <main className="success-page">
             <div className="container">
                 <div className="sp-header text-center">
                     <span className="sp-eyebrow">Real Transformations</span>

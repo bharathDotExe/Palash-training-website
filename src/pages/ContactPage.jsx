@@ -69,7 +69,7 @@ export default function ContactPage() {
                                     <div className="info-icon text-gradient" style={{ flexShrink: 0, marginTop: '2px' }}><Mail size={24} /></div>
                                     <div className="info-text">
                                         <strong style={{ display: 'block', fontSize: '1.1rem', marginBottom: '4px' }}>Email Us</strong>
-                                        <p style={{ color: 'var(--text-light)' }}>hello@palashtraining.com</p>
+                                        <p style={{ color: 'var(--text-light)' }}>Palash.training@gmail.com</p>
                                     </div>
                                 </li>
                                 <li style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>

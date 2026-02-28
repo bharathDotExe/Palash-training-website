@@ -56,7 +56,7 @@ const studentImgs = [
 
 export default function TestimonialsPage() {
     return (
-        <main className="testimonials-page" style={{ paddingTop: '150px', minHeight: '80vh' }}>
+        <main className="testimonials-page">
             <div className="container">
 
                 {/* ── Header ── */}

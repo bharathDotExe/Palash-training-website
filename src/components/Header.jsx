@@ -51,6 +51,7 @@ export default function Header({ onBookDemo }) {
     { to: '/services', label: 'Services' },
     { to: '/about', label: 'About Trainer' },
     { to: '/testimonials', label: 'Testimonials' },
+    { to: '/success-stories', label: 'Success Stories' },
     { to: '/gallery', label: 'Gallery' },
     { to: '/blog', label: 'Blog' },
     { to: '/forum', label: 'Forum' },
@@ -80,9 +81,9 @@ export default function Header({ onBookDemo }) {
               <Phone size={18} color="#f9a825" />
               +91 96408 16324
             </a>
-            <a href="mailto:hello@palashtraining.com" className="contact-link email hide-on-mobile">
+            <a href="mailto:Palash.training@gmail.com" className="contact-link email hide-on-mobile">
               <Mail size={18} color="#f9a825" />
-              hello@palashtraining.com
+              Palash.training@gmail.com
             </a>
           </div>
           <div className="contact-right">

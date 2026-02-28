@@ -1,40 +1,49 @@
+import { Link } from 'react-router-dom';
+import trainerPhoto from '../assets/trainer-photo.png';
 import './TrainerIntroHome.css';
 
 export default function TrainerIntroHome() {
     return (
         <section id="about" className="trainer-home-section section-padding">
             <div className="container trainer-home-content">
+
+                {/* ── Left Column: Photo & Highlights ── */}
                 <div className="trainer-home-image-col">
-                    <div className="trainer-home-photo-container glass">
+                    <div className="th-photo-container glass">
                         <img
-                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
-                            alt="Language Trainer"
-                            className="trainer-home-img"
+                            src={trainerPhoto}
+                            alt="Communication Coach"
+                            className="th-trainer-img"
                         />
-                        <div className="trainer-home-badge text-gradient">
-                            <span className="badge-years">10+</span>
-                            <span className="badge-label">Years Exp.</span>
+                        <div className="th-experience-badge">
+                            <span className="th-badge-name">N. Madhuri Bedekar</span>
+                            <span className="th-badge-role">Communication Coach</span>
+                            <span className="th-badge-exp">25+ Yrs Exp.</span>
                         </div>
+                    </div>
+
+                    <div className="th-highlights-card glass">
+                        <p className="th-highlight-item">✨ Corporate Communication Specialist</p>
+                        <p className="th-highlight-item">✨ British Council Certified</p>
+                        <p className="th-highlight-item">✨ Interactive & Gen-Z Friendly</p>
                     </div>
                 </div>
 
+                {/* ── Right Column: Bio & CTA ── */}
                 <div className="trainer-home-info">
-                    <h2 className="section-title">Meet Your <span className="text-gradient">Mentor</span></h2>
-                    <h3 className="trainer-home-name">Expert Language Coach</h3>
+                    <span className="th-eyebrow">Meet Your Mentor</span>
+                    <h2 className="section-title">Expert Language <span className="text-gradient">Coach</span></h2>
+
                     <p className="trainer-home-bio">
-                        With over a decade of experience nurturing aspirations and transforming communication skills,
-                        our specialized training approach bridges the gap between potential and performance.
-                        We focus on modern, engaging methods that resonate with today's generation,
-                        ensuring learning is not just effective, but enjoyable.
+                        With nearly 25 years of diverse corporate experience in Public Relations, Business Development, and Corporate Communication, I bring depth, insight, and authenticity to the world of communication training.
                     </p>
-                    <ul className="trainer-home-highlights">
-                        <li>✨ Certified IELTS Examiner</li>
-                        <li>✨ Corporate Communication Specialist</li>
-                        <li>✨ Interactive &amp; Gen-Z Friendly Teaching Style</li>
-                        <li>✨ Personalized Mastery Plans</li>
-                    </ul>
-                    <button className="btn btn-outline" style={{ marginTop: '20px' }}>Read Full Profile</button>
+                    <p className="trainer-home-bio">
+                        Whether it's workplace communication, official presentations, IELTS preparation, or interview readiness, my sessions focus on clarity, confidence, and professional presence. My mission is not merely to improve language skills, but to help individuals rediscover their voice and step forward with authority.
+                    </p>
+
+                    <Link to="/about" className="btn btn-primary" style={{ marginTop: '20px' }}>Read Full Profile</Link>
                 </div>
+
             </div>
         </section>
     );

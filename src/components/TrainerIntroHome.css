@@ -5,93 +5,134 @@
 
 .trainer-home-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 320px 1fr;
     gap: 60px;
-    align-items: center;
+    align-items: start;
 }
 
+/* ── Left Column (Photo & Highlights) ── */
 .trainer-home-image-col {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.trainer-home-photo-container {
+.th-photo-container {
     padding: 15px;
     border-radius: 20px;
     position: relative;
     background: var(--bg-color);
 }
 
-.trainer-home-img {
+.th-trainer-img {
     width: 100%;
+    height: auto;
     border-radius: 12px;
     display: block;
+    object-fit: contain;
 }
 
-.trainer-home-badge {
+.th-experience-badge {
     position: absolute;
-    bottom: -20px;
-    right: -20px;
+    bottom: -16px;
+    right: -16px;
     background: var(--white);
-    padding: 20px 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 12px 18px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2px;
     border: 2px solid var(--palash-orange);
+    min-width: 160px;
+    text-align: center;
 }
 
-.trainer-home-badge .badge-years {
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.trainer-home-badge .badge-label {
+.th-badge-name {
     font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.th-badge-role {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--text-light);
+    line-height: 1.2;
+}
+
+.th-badge-exp {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 4px;
+}
+
+.th-highlights-card {
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.th-highlight-item {
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-dark);
+    line-height: 1.4;
+}
+
+/* ── Right Column (Info) ── */
+.trainer-home-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.th-eyebrow {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--palash-orange);
+    background: rgba(255, 94, 0, 0.09);
+    padding: 5px 16px;
+    border-radius: 50px;
+    margin-bottom: 14px;
 }
 
 .trainer-home-info .section-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
-    margin-bottom: 10px;
-}
-
-.trainer-home-name {
-    font-size: 1.5rem;
-    color: var(--text-light);
-    margin-bottom: 20px;
-    font-weight: 500;
+    margin-bottom: 24px;
+    line-height: 1.15;
 }
 
 .trainer-home-bio {
     font-size: 1.1rem;
     color: var(--text-light);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
-.trainer-home-highlights {
-    list-style: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.trainer-home-highlights li {
-    color: var(--text-dark);
+@media (max-width: 992px) {
+    .trainer-home-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 768px) {
-    .trainer-home-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .trainer-home-badge {
+    .th-experience-badge {
         position: relative;
         bottom: auto;
         right: auto;
@@ -101,13 +142,8 @@
         margin-right: auto;
     }
 
-    .trainer-home-info .section-title {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .trainer-home-name,
-    .trainer-home-bio {
+    .trainer-home-info {
+        align-items: center;
         text-align: center;
     }
 
