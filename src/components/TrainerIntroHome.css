@@ -1,0 +1,117 @@
+.trainer-home-section {
+    background-color: var(--white);
+    position: relative;
+}
+
+.trainer-home-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.trainer-home-image-col {
+    position: relative;
+}
+
+.trainer-home-photo-container {
+    padding: 15px;
+    border-radius: 20px;
+    position: relative;
+    background: var(--bg-color);
+}
+
+.trainer-home-img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.trainer-home-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--white);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--palash-orange);
+}
+
+.trainer-home-badge .badge-years {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.trainer-home-badge .badge-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.trainer-home-info .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.trainer-home-name {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.trainer-home-bio {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.trainer-home-highlights {
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.trainer-home-highlights li {
+    color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    .trainer-home-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .trainer-home-badge {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .trainer-home-info .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .trainer-home-name,
+    .trainer-home-bio {
+        text-align: center;
+    }
+
+    .trainer-home-image-col {
+        order: -1;
+    }
+}

@@ -55,7 +55,7 @@ export default function Header({ onBookDemo }) {
             <li><Link to="/services" className={isActive('/services')} onClick={closeMobileMenu}>Services</Link></li>
             <li><Link to="/about" className={isActive('/about')} onClick={closeMobileMenu}>About Trainer</Link></li>
             <li><Link to="/testimonials" className={isActive('/testimonials')} onClick={closeMobileMenu}>Testimonials</Link></li>
-            <li><Link to="/gallery" className={isActive('/gallery')} onClick={closeMobileMenu}>Gallery</Link></li>
+            <li><Link to="/success-stories" className={isActive('/success-stories')} onClick={closeMobileMenu}>Success Stories</Link></li>
             <li><Link to="/blog" className={isActive('/blog')} onClick={closeMobileMenu}>Blog</Link></li>
             <li><Link to="/forum" className={isActive('/forum')} onClick={closeMobileMenu}>Forum</Link></li>
             <li><Link to="/contact" className={isActive('/contact')} onClick={closeMobileMenu}>Contact</Link></li>
@@ -82,7 +82,7 @@ export default function Header({ onBookDemo }) {
           <li><Link to="/services" className={isActive('/services')} onClick={closeMobileMenu}>Services</Link></li>
           <li><Link to="/about" className={isActive('/about')} onClick={closeMobileMenu}>About Trainer</Link></li>
           <li><Link to="/testimonials" className={isActive('/testimonials')} onClick={closeMobileMenu}>Testimonials</Link></li>
-          <li><Link to="/gallery" className={isActive('/gallery')} onClick={closeMobileMenu}>Gallery</Link></li>
+          <li><Link to="/success-stories" className={isActive('/success-stories')} onClick={closeMobileMenu}>Success Stories</Link></li>
           <li><Link to="/blog" className={isActive('/blog')} onClick={closeMobileMenu}>Blog</Link></li>
           <li><Link to="/forum" className={isActive('/forum')} onClick={closeMobileMenu}>Forum</Link></li>
           <li><Link to="/contact" className={isActive('/contact')} onClick={closeMobileMenu}>Contact</Link></li>

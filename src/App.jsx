@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import ServicesPage from './pages/ServicesPage';
 import AboutTrainer from './pages/AboutTrainer';
 import TestimonialsPage from './pages/TestimonialsPage';
-import GalleryPage from './pages/GalleryPage';
+import SuccessStoriesPage from './pages/SuccessStoriesPage';
 import BlogPage from './pages/BlogPage';
 import ForumPage from './pages/ForumPage';
 
@@ -27,7 +27,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/about" element={<AboutTrainer />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/success-stories" element={<SuccessStoriesPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/forum" element={<ForumPage />} />
       </Routes>

@@ -43,23 +43,18 @@
 
 .main-nav {
     margin: 15px auto;
-    max-width: 1200px;
+    max-width: 1280px;
     width: calc(100% - 40px);
-    padding: 8px 30px;
+    padding: 8px 24px;
     background: rgba(255, 255, 255, 0.15) !important;
     backdrop-filter: blur(25px) !important;
     -webkit-backdrop-filter: blur(25px) !important;
     border-radius: 60px !important;
-    /* Perfect capsule shape */
     border: none !important;
-    /* Removed static border for animated border */
     box-shadow:
         0 15px 35px rgba(0, 0, 0, 0.05),
-        /* soft drop shadow */
         inset 0 4px 10px rgba(255, 255, 255, 0.6),
-        /* interior top highlight */
         inset 0 -4px 10px rgba(0, 0, 0, 0.03) !important;
-    /* interior bottom shadow for 3D depth */
     transition: all 0.3s ease;
     position: relative;
 }
@@ -70,7 +65,6 @@
     inset: 0;
     border-radius: 60px;
     padding: 2px;
-    /* Stroke width of the moving color line */
     background: linear-gradient(90deg, #FF8C42, #E62A2B, #00B4D8, #FF8C42, #E62A2B);
     background-size: 200% auto;
     animation: moveBorderColors 4s linear infinite;
@@ -92,8 +86,6 @@
     }
 }
 
-
-
 .nav-content {
     display: flex;
     justify-content: space-between;
@@ -108,10 +100,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 .logo-img {
-    height: 55px;
+    height: 50px;
     width: auto;
     object-fit: contain;
 }
@@ -123,30 +116,35 @@
 
 .logo-text {
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     line-height: 1;
     color: var(--palash-red);
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .logo-sub {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-dark);
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-links a:hover,

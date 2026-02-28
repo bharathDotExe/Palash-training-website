@@ -1,0 +1,111 @@
+.vision-page {
+    background-color: var(--bg-color);
+    padding-bottom: 80px;
+}
+
+.vision-header {
+    margin-bottom: 48px;
+}
+
+.vision-eyebrow {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--palash-orange);
+    background: rgba(255, 94, 0, 0.09);
+    padding: 5px 16px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+}
+
+.vision-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.vision-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px;
+    border: 1px solid var(--glass-border);
+}
+
+.vision-quote-box {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 94, 0, 0.15);
+    text-align: center;
+}
+
+.vision-quote {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-style: italic;
+}
+
+.vision-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.vision-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+.vision-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pillar {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 94, 0, 0.1);
+    padding: 24px;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.pillar:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 94, 0, 0.3);
+}
+
+.pillar h3 {
+    color: var(--palash-orange);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.pillar p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .vision-content {
+        padding: 30px 20px;
+    }
+
+    .vision-quote {
+        font-size: 1.4rem;
+    }
+
+    .vision-pillars {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
