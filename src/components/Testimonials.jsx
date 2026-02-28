@@ -32,8 +32,8 @@ export default function Testimonials() {
                 <h2 className="section-title text-center" style={{ marginBottom: '50px' }}>What Our <span className="text-gradient">Students Say</span></h2>
 
                 <div className="testimonials-grid">
-                    {testimonials.map((t) => (
-                        <div key={t.id} className="testimonial-card glass">
+                    {testimonials.map((t, index) => (
+                        <div key={t.id} className={`testimonial-card glass ${index === 1 ? 'highlighted-card' : ''}`}>
                             <div className="stars">
                                 {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="var(--palash-orange)" color="var(--palash-orange)" />)}
                             </div>
@@ -47,6 +47,11 @@ export default function Testimonials() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                <div className="text-center mt-64" style={{ marginTop: '64px' }}>
+                    <p className="space-24" style={{ fontSize: '1.2rem', color: 'var(--text-dark)', fontWeight: 500 }}>Ready to write your own success story?</p>
+                    <button className="btn btn-primary">Join Palash Training</button>
                 </div>
             </div>
         </section>

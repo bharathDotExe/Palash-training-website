@@ -36,7 +36,7 @@ export default function Services() {
     return (
         <section id="services" className="services-section section-padding">
             <div className="container">
-                <div className="section-header text-center">
+                <div className="section-header text-center services-header-constrained">
                     <h2 className="section-title">Our <span className="text-gradient">Programs</span></h2>
                     <p className="section-subtitle">Comprehensive training modules designed for measurable growth</p>
                 </div>
@@ -55,6 +55,11 @@ export default function Services() {
                         </div>
                     ))}
                 </div>
+            </div>
+
+            <div className="services-cta-block text-center mt-64">
+                <p className="services-cta-text space-24">Not sure which program is right for you?</p>
+                <button className="btn btn-primary">Book Free Demo</button>
             </div>
         </section>
     );

@@ -1,161 +1,255 @@
+/* ================================================================
+   HEADER.CSS — Palash Training World-Class Navbar
+   Complete rewrite: clean, zero-conflict, production-ready
+   ================================================================ */
+
+/* ── CSS Variable for dynamic spacer ── */
+:root {
+    --navbar-height: 104px;
+}
+
+/* ================================================================
+   1. HEADER WRAPPER (sticky container)
+   ================================================================ */
 .header-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    background: transparent;
 }
 
-.top-bar {
-    background-color: var(--text-dark);
-    color: var(--gray-200);
-    padding: 8px 0;
-    font-size: 0.85rem;
+/* ── Dynamic spacer pushes content below fixed header ── */
+.header-spacer {
+    height: var(--navbar-height);
+    width: 100%;
+    pointer-events: none;
 }
 
-.top-bar-content {
+/* ================================================================
+   2. TOP CONTACT BAR
+   ================================================================ */
+.top-contact-bar {
+    width: 100%;
+    background: #1e3a56;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 5%;
+    min-height: 40px;
+    font-size: 0.95rem;
+    z-index: 1001;
 }
 
-.contact-info,
-.social-icons {
+.top-contact-bar .contact-left {
     display: flex;
-    gap: 20px;
     align-items: center;
+    gap: 24px;
+    font-weight: 500;
 }
 
-.contact-link,
-.social-link {
-    color: #c9cecf;
+.top-contact-bar .contact-link {
+    color: #fff;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    transition: color 0.3s ease;
+    gap: 8px;
+    font-size: inherit;
+    transition: color 0.2s;
 }
 
-.contact-link:hover,
-.social-link:hover {
-    color: var(--palash-orange);
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
-.main-nav {
-    margin: 15px auto;
-    max-width: 1200px;
-    width: calc(100% - 40px);
-    padding: 8px 30px;
-    background: rgba(255, 255, 255, 0.15) !important;
-    backdrop-filter: blur(25px) !important;
-    -webkit-backdrop-filter: blur(25px) !important;
-    border-radius: 60px !important;
-    /* Perfect capsule shape */
-    border: none !important;
-    /* Removed static border for animated border */
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.05),
-        /* soft drop shadow */
-        inset 0 4px 10px rgba(255, 255, 255, 0.6),
-        /* interior top highlight */
-        inset 0 -4px 10px rgba(0, 0, 0, 0.03) !important;
-    /* interior bottom shadow for 3D depth */
-    transition: all 0.3s ease;
+.top-contact-bar .contact-link:hover {
+    color: #25d366;
+}
+
+.top-contact-bar .contact-link.phone:hover {
+    color: #f9a825;
+}
+
+.top-contact-bar .contact-link.email:hover {
+    color: #ffb300;
+}
+
+.top-contact-bar .contact-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.top-contact-bar .social-link {
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.2s, opacity 0.2s;
+    text-decoration: none;
+}
+
+.top-contact-bar .social-link:hover {
+    transform: translateY(-2px) scale(1.1);
+    opacity: 0.85;
+}
+
+/* ================================================================
+   3. NAVBAR WRAPPER + GLASS PILL
+   ================================================================ */
+.nav-wrapper {
+    width: 100%;
+    padding: 8px 1.5%;
+}
+
+.glass-pill {
     position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+    padding: 0 32px;
+    border-radius: 999px;
+    /* Industry Standard Frosted Glass Layer */
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: none;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    transition: background 0.3s ease,
+        backdrop-filter 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.main-nav::before {
-    content: '';
+/* ── SINGLE STEADY FLOWING RING ── */
+.glass-pill::before {
+    content: "";
     position: absolute;
-    inset: 0;
-    border-radius: 60px;
+    inset: -2px;
+    border-radius: inherit;
     padding: 2px;
-    /* Stroke width of the moving color line */
-    background: linear-gradient(90deg, #FF8C42, #E62A2B, #00B4D8, #FF8C42, #E62A2B);
-    background-size: 200% auto;
-    animation: moveBorderColors 4s linear infinite;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    background: linear-gradient(90deg,
+            #f38b2a,
+            #f5b66a,
+            #f38b2a,
+            #f5b66a,
+            #f38b2a);
+    background-size: 300% 100%;
+    animation: smoothFlow 8s linear infinite;
+
+    /* Mask to show only border */
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
     mask-composite: exclude;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+
     pointer-events: none;
-    z-index: 10;
 }
 
-@keyframes moveBorderColors {
+@keyframes smoothFlow {
     0% {
-        background-position: 0% center;
+        background-position: 0% 50%;
     }
 
     100% {
-        background-position: 200% center;
+        background-position: 200% 50%;
     }
 }
 
-
-
-.nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    position: relative;
-    z-index: 10;
+/* ── Scroll state: deeper shadow, same glass ── */
+.glass-pill.scrolled {
+    box-shadow:
+        0 8px 32px rgba(31, 38, 135, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        0 4px 24px rgba(30, 58, 86, 0.10);
 }
 
+/* ================================================================
+   4. LOGO BLOCK
+   ================================================================ */
 .logo-container {
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 .logo-img {
-    height: 55px;
+    height: 40px;
     width: auto;
     object-fit: contain;
 }
 
-.logo-placeholder {
+.logo-text-block {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    line-height: 1;
 }
 
 .logo-text {
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 24px;
     line-height: 1;
     color: var(--palash-red);
     letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.logo-text span {
+    font-size: 20px;
+    color: var(--text-dark);
+    font-weight: 700;
 }
 
 .logo-sub {
-    font-size: 0.8rem;
+    font-size: 12px;
     color: var(--text-dark);
     font-weight: 500;
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+    margin-top: 2px;
+    opacity: 0.7;
 }
 
+/* ================================================================
+   5. NAV LINKS (center)
+   ================================================================ */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    position: relative;
+    transition: color 0.25s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--palash-orange);
-}
-
-.nav-links a.active {
-    position: relative;
 }
 
 .nav-links a.active::after {
@@ -169,232 +263,317 @@
     border-radius: 2px;
 }
 
-.nav-actions {
+/* ================================================================
+   6. NAV RIGHT (CTA + Hamburger)
+   ================================================================ */
+.nav-right {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+    flex-shrink: 0;
 }
 
-.mobile-menu-btn {
+.nav-cta {
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f9a825, #e65100);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 14px rgba(249, 168, 37, 0.30);
+    padding: 0 24px;
+    height: 42px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 81, 0, 0.40);
+    color: #fff;
+}
+
+/* ── Hamburger (hidden on desktop) ── */
+.hamburger-btn {
     display: none;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
     background: transparent;
     border: none;
+    border-radius: 10px;
     color: var(--text-dark);
     cursor: pointer;
-    z-index: 1000;
+    transition: background 0.2s;
 }
 
-.desktop-only {
+.hamburger-btn:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+/* ================================================================
+   7. MOBILE DRAWER + BACKDROP
+   ================================================================ */
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.drawer-backdrop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(80vw, 320px);
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1999;
     display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-only-item {
-    display: none;
-    width: 100%;
-    padding: 0 20px;
+.mobile-drawer.open {
+    transform: translateX(0);
 }
 
-.nav-cta-mobile {
-    width: 100%;
-    margin-top: 20px;
-    padding: 15px;
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.mobile-menu-btn {
-    display: none;
-    background: transparent;
-    border: none;
+.drawer-title {
+    font-weight: 700;
+    font-size: 1.1rem;
     color: var(--text-dark);
+}
+
+.drawer-close {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: none;
+    background: #f0f4f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    padding: 5px;
-    z-index: 2001;
+    color: var(--text-dark);
+    transition: background 0.2s;
 }
 
-
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
+.drawer-close:hover {
+    background: #e2e8f0;
 }
 
-.mobile-menu-overlay {
-    display: none;
+.drawer-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 20px;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
 }
 
-@media (max-width: 768px) {
-    .hide-mobile {
+.drawer-nav-links a {
+    display: block;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+}
+
+.drawer-nav-links a:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.drawer-nav-links a.active {
+    background: rgba(249, 168, 37, 0.12);
+    color: var(--palash-orange);
+}
+
+.drawer-cta-wrap {
+    padding: 16px 20px 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.drawer-cta {
+    width: 100%;
+    height: 48px;
+    font-size: 1rem;
+}
+
+/* ================================================================
+   8. RESPONSIVE BREAKPOINTS
+   ================================================================ */
+
+/* ── Tablet & smaller desktop (≤1024px) ── */
+@media (max-width: 1024px) {
+    .nav-links {
         display: none;
     }
 
-    .top-bar {
-        padding: 4px 0;
-        /* Radically reduce top bar padding */
+    .hamburger-btn {
+        display: flex;
     }
 
-    .top-bar-content {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        flex-wrap: nowrap;
+    .glass-pill {
+        height: 60px;
+        padding: 0 24px;
     }
 
-    .contact-info {
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: 15px;
+    .nav-wrapper {
+        padding: 6px 1.5%;
     }
 
-    .social-icons {
-        justify-content: center;
-        width: auto;
+    .top-contact-bar {
+        font-size: 0.9rem;
+        min-height: 36px;
+        padding: 0 3%;
+    }
+
+    .top-contact-bar .contact-left {
+        gap: 16px;
+    }
+
+    .top-contact-bar .contact-right {
         gap: 10px;
     }
 
-    .contact-link,
-    .social-link {
-        font-size: 0.8rem;
+    .whatsapp-icon {
+        width: 18px;
+        height: 18px;
     }
 
-    .main-nav {
-        margin: 10px auto;
-        max-width: 100%;
-        width: calc(100% - 20px);
-        border-radius: 40px !important;
-        padding: 10px 20px;
-        background: rgba(255, 255, 255, 0.25) !important;
-        backdrop-filter: blur(20px) !important;
-        -webkit-backdrop-filter: blur(20px) !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    .logo-text {
+        font-size: 22px;
     }
 
-    .nav-cta {
-        padding: 8px 15px;
-        /* Smaller padding for mobile */
-        font-size: 0.9rem;
-        /* Smaller font for mobile */
-    }
-
-    .nav-links,
-    .desktop-only {
-        display: none !important;
-    }
-
-    .mobile-menu-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background: #f0f4f8;
-        /* Light gray/blue bg like screenshot */
-        border-radius: 8px;
-        color: var(--text-dark);
-    }
-
-    .logo-img {
-        height: 35px !important;
-        /* Slender logo height */
+    .logo-text span {
+        font-size: 18px;
     }
 
     .logo-sub {
-        display: block !important;
-        font-size: 0.55rem !important;
-        /* Make it smaller to fit mobile */
-        margin-top: -2px;
-        line-height: 1;
+        font-size: 11px;
+    }
+}
+
+/* ── Mobile (≤768px) ── */
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none !important;
     }
 
-    .mobile-menu-overlay {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        bottom: 0;
-        width: 80%;
-        max-width: 320px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        padding: 0;
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-        z-index: 2000;
-        transition: right 0.3s ease;
+    .glass-pill {
+        height: 56px;
+        padding: 0 16px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
-    .mobile-menu-overlay.active {
-        right: 0;
+    .glass-pill::before {
+        opacity: 0.85;
+        animation-duration: 12s;
     }
 
-    .mobile-menu-header {
-        display: flex;
-        justify-content: flex-end;
-        padding: 20px;
+    .nav-wrapper {
+        padding: 6px 3%;
     }
 
-    .mobile-menu-close {
-        background: #f0f4f8;
-        border: none;
-        width: 40px;
+    .top-contact-bar {
+        font-size: 0.82rem;
+        min-height: 36px;
+        padding: 0 4%;
+    }
+
+    .top-contact-bar .contact-left {
+        gap: 12px;
+    }
+
+    .top-contact-bar .contact-right {
+        gap: 8px;
+    }
+
+    .whatsapp-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .logo-img {
+        height: 34px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .logo-text span {
+        font-size: 16px;
+    }
+
+    .logo-sub {
+        display: none;
+    }
+
+    .desktop-cta {
+        display: none;
+    }
+
+    .nav-cta {
         height: 40px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        color: var(--text-dark);
+        padding: 0 20px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ── Small mobile (≤480px) ── */
+@media (max-width: 480px) {
+    .top-contact-bar {
+        font-size: 0.75rem;
+        padding: 0 3%;
     }
 
-    .mobile-nav-links {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 0 20px 20px;
-        margin: 0;
-        overflow-y: auto;
+    .top-contact-bar .contact-left {
+        gap: 8px;
     }
 
-    .mobile-nav-links a {
-        font-size: 1.1rem;
-        padding: 12px 20px;
-        border-radius: 12px;
-        background: rgba(0, 0, 0, 0.03);
-        /* Subtle background */
-        border: none;
-        transition: all 0.3s ease;
-        display: block;
-        color: var(--text-dark);
-        font-weight: 600;
-        text-align: center;
-        text-decoration: none;
+    .glass-pill {
+        padding: 0 12px;
     }
 
-    .mobile-nav-links a.active {
-        background: rgba(255, 140, 66, 0.15);
-        /* Light orange bg */
-        color: var(--palash-orange);
-        border-left: 4px solid var(--palash-orange);
-        border-right: 4px solid var(--palash-orange);
+    .logo-text {
+        font-size: 16px;
     }
 
-    /* Use :active pseudo-class for touch feedback instead of :hover to avoid sticky hover states on mobile */
-    .mobile-nav-links a:active {
-        background: rgba(255, 140, 66, 0.15);
-        color: var(--palash-orange);
-        transform: scale(0.98);
-        transition: transform 0.1s ease;
-    }
-
-    .mobile-only-item {
-        display: block;
-        margin-top: 20px;
-        padding: 0;
+    .logo-text span {
+        font-size: 14px;
     }
 }

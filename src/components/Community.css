@@ -6,13 +6,31 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
 }
 
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 32px;
+@media (max-width: 1199px) {
+    .community-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .blog-grid {
+        gap: 24px;
+    }
+}
+@media (max-width: 767px) {
+    .community-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .blog-grid {
+        gap: 16px;
+    }
+}
 }
 
 .blog-card {

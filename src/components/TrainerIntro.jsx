@@ -33,6 +33,27 @@ export default function TrainerIntro() {
                     <button className="btn btn-outline" style={{ marginTop: '20px' }}>Read Full Profile</button>
                 </div>
             </div>
+
+            <div className="container">
+                <div className="trust-metrics-grid mt-64">
+                    <div className="metric-card glass">
+                        <div className="metric-number text-gradient">10+</div>
+                        <div className="metric-label">Years Experience</div>
+                    </div>
+                    <div className="metric-card glass">
+                        <div className="metric-number text-gradient">1000+</div>
+                        <div className="metric-label">Students Trained</div>
+                    </div>
+                    <div className="metric-card glass">
+                        <div className="metric-number text-gradient">500+</div>
+                        <div className="metric-label">IELTS 7+ Achievers</div>
+                    </div>
+                    <div className="metric-card glass">
+                        <div className="metric-number text-gradient">50+</div>
+                        <div className="metric-label">Corporate Clients</div>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 }

@@ -1,6 +1,6 @@
 .hero-section {
-    padding-top: 140px;
-    padding-bottom: 20px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     min-height: auto;
     display: flex;
     align-items: center;
@@ -17,7 +17,32 @@
 .hero-content {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
-    gap: 30px;
+    gap: 32px;
+
+    @media (max-width: 1199px) {
+        .hero-section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .hero-content {
+            gap: 24px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .hero-section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
     align-items: center;
     position: relative;
     z-index: 10;
@@ -184,15 +209,20 @@
 
 @media (max-width: 768px) {
     .hero-section {
-        padding-top: 150px;
-        padding-bottom: 20px;
+        padding-top: 64px;
+        padding-bottom: 48px;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
     }
 
     .hero-content {
         display: flex;
         flex-direction: column;
-        /* Text on top, Image below */
-        gap: 30px;
+        justify-content: center;
+        gap: 24px;
+        margin-top: -16px;
+        /* Slight negative margin to lift content */
     }
 
     .hero-content.container {
@@ -224,36 +254,34 @@
 
     .hero-text {
         background: rgba(255, 255, 255, 0.15);
-        /* Much more transparent background */
         backdrop-filter: blur(2px);
-        /* Very minimal blur */
         -webkit-backdrop-filter: blur(2px);
         border: 1px solid rgba(255, 255, 255, 0.3);
-        /* Subtle border */
         border-radius: 20px;
-        /* Rounded corners */
         margin-top: 0;
         position: relative;
         z-index: 20;
-        padding: 30px 20px;
-        /* Padding for the box */
+        padding: 24px 20px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        /* Softer shadow */
         text-align: center;
     }
 
     .hero-title {
-        font-size: 2.2rem;
-        line-height: 1.2;
+        font-size: 2.25rem;
+        line-height: 1.1;
+        margin-bottom: 16px;
     }
 
     .hero-subtitle {
         font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 24px;
     }
 
     .hero-ctas {
         flex-direction: column;
-        gap: 15px;
+        gap: 16px;
+        margin-bottom: 24px;
     }
 
     .hero-ctas .btn {
@@ -263,8 +291,8 @@
 
     .hero-stats {
         justify-content: space-between;
-        margin-top: 20px;
-        padding-top: 20px;
+        margin-top: 16px;
+        padding-top: 16px;
         border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 }

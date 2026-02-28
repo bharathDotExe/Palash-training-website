@@ -11,10 +11,10 @@ export default function GalleryPage() {
     ];
 
     return (
-        <main style={{ paddingTop: '150px', paddingBottom: '100px', minHeight: '80vh', textAlign: 'center' }}>
+        <main className="section-padding" style={{ minHeight: '80vh', textAlign: 'center' }}>
             <div className="container">
                 <h2 style={{ fontSize: '3rem', color: 'var(--text-dark)' }}>Our <span className="text-gradient">Gallery</span></h2>
-                <p style={{ marginTop: '20px', color: 'var(--text-light)', fontSize: '1.2rem', marginBottom: '50px' }}>
+                <p className="space-24" style={{ color: 'var(--text-light)', fontSize: '1.2rem' }}>
                     Check out some highlights from our training sessions and events.
                 </p>
 

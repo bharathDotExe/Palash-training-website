@@ -15,7 +15,25 @@
 }
 
 .booking-content {
-    padding: 40px;
+    padding: 32px;
+    @media (max-width: 1199px) {
+        .booking-section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .booking-content {
+            padding: 24px;
+        }
+    }
+    @media (max-width: 767px) {
+        .booking-section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .booking-content {
+            padding: 16px;
+        }
+    }
     color: var(--white);
 }
 

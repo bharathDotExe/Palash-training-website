@@ -10,8 +10,7 @@ import AboutTrainer from './pages/AboutTrainer';
 import TestimonialsPage from './pages/TestimonialsPage';
 import GalleryPage from './pages/GalleryPage';
 import BlogPage from './pages/BlogPage';
-import ForumPage from './pages/ForumPage';
-
+import ContactPage from './pages/ContactPage';
 import './App.css';
 
 function App() {
@@ -29,7 +28,7 @@ function App() {
         <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/forum" element={<ForumPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
       {isBookingModalOpen && <BookingModal onClose={toggleBookingModal} />}
