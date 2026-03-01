@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
 
+import ScrollToTop from './components/ScrollToTop';
+
 import Home from './pages/Home';
 import ServicesPage from './pages/ServicesPage';
 import AboutTrainer from './pages/AboutTrainer';
@@ -22,6 +24,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Header onBookDemo={toggleBookingModal} />
       <Routes>
         <Route path="/" element={<Home onBookDemo={toggleBookingModal} />} />
