@@ -12,6 +12,9 @@ import SuccessStoriesPage from './pages/SuccessStoriesPage';
 import BlogPage from './pages/BlogPage';
 import ForumPage from './pages/ForumPage';
 import ContactPage from './pages/ContactPage';
+import GalleryPage from './pages/GalleryPage';
+
+import LogoTest from './pages/LogoTest';
 
 import './App.css';
 
@@ -30,8 +33,10 @@ function App() {
         <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/success-stories" element={<SuccessStoriesPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/forum" element={<ForumPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/logo-test" element={<LogoTest />} />
       </Routes >
       <Footer />
       {isBookingModalOpen && <BookingModal onClose={toggleBookingModal} />}

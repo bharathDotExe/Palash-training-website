@@ -59,7 +59,7 @@ export default function ServicesHome() {
             <div className="container">
                 <div className="sh-header text-center">
                     <span className="sh-eyebrow">What I Offer</span>
-                    <h2 className="section-title">Our <span className="text-gradient">Programs</span></h2>
+                    <h2 className="section-title">My <span className="text-gradient">Programs</span></h2>
                     <p className="section-subtitle">Comprehensive training modules designed for measurable growth</p>
                 </div>
 

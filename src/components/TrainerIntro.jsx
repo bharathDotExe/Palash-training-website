@@ -54,9 +54,9 @@ export default function TrainerIntro() {
 
                 {/* ── Page Header ── */}
                 <div className="about-page-header text-center">
-                    <span className="about-eyebrow">Our Story</span>
+                    <span className="about-eyebrow">My Story</span>
                     <h1 className="about-page-title">
-                        About <span className="text-gradient">Us</span>
+                        About <span className="text-gradient">ME</span>
                     </h1>
                     <p className="about-tagline-hero">"Find Your Voice. Own Your Space. Lead With Confidence."</p>
                 </div>
@@ -120,7 +120,7 @@ export default function TrainerIntro() {
                 <div className="about-vision-mission-section">
                     <div className="vision-mission-grid">
                         <div className="vm-card glass">
-                            <h3 className="vm-title"><Sparkles className="vm-icon" size={24} /> Our <span className="text-gradient">Vision</span></h3>
+                            <h3 className="vm-title"><Sparkles className="vm-icon" size={24} /> My <span className="text-gradient">Vision</span></h3>
                             <ul className="vm-list">
                                 {visionPoints.map((point, i) => (
                                     <li key={i}><CheckCircle2 size={16} className="vm-check" /><span>{point}</span></li>
@@ -128,7 +128,7 @@ export default function TrainerIntro() {
                             </ul>
                         </div>
                         <div className="vm-card glass">
-                            <h3 className="vm-title"><Award className="vm-icon" size={24} /> Our <span className="text-gradient">Mission</span></h3>
+                            <h3 className="vm-title"><Award className="vm-icon" size={24} /> My <span className="text-gradient">mission</span></h3>
                             <ul className="vm-list">
                                 {missionPoints.map((point, i) => (
                                     <li key={i}><CheckCircle2 size={16} className="vm-check" /><span>{point}</span></li>
