@@ -23,7 +23,7 @@ export default function LinkedInBadge() {
     }, []);
 
     return (
-        <div style={{ marginTop: '30px', display: 'flex', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div
                 className="badge-base LI-profile-badge"
                 data-locale="en_US"

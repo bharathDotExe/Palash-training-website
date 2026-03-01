@@ -59,6 +59,20 @@ export default function TrainerIntroHome() {
                     </div>
 
                     <div className="social-badges-container">
+                        {/* Connecting Arrows */}
+                        <div className="social-arrow arrow-1">
+                            <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                                <path d="M0,10 L80,10" stroke="var(--palash-orange)" strokeWidth="3" fill="none" strokeDasharray="6,6" className="animated-line" />
+                                <polygon points="80,2 98,10 80,18" fill="var(--palash-orange)" />
+                            </svg>
+                        </div>
+                        <div className="social-arrow arrow-2">
+                            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <path d="M50,0 Q50,50 30,80" stroke="var(--palash-orange)" strokeWidth="3" fill="none" strokeDasharray="6,6" className="animated-line" />
+                                <polygon points="34,75 18,92 22,70" fill="var(--palash-orange)" />
+                            </svg>
+                        </div>
+
                         <LinkedInBadge />
                         <InstagramBadge />
                         <FacebookBadge />

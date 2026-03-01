@@ -1,5 +1,5 @@
 .trainer-home-section {
-    background-color: var(--white);
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('/trainer-bg.jpg') center/cover no-repeat;
     position: relative;
 }
 
@@ -37,15 +37,14 @@
     bottom: -16px;
     right: -16px;
     background: var(--white);
-    padding: 12px 18px;
-    border-radius: 14px;
+    padding: 10px 16px;
+    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2px;
     border: 2px solid var(--palash-orange);
-    min-width: 160px;
     text-align: center;
 }
 
@@ -124,12 +123,62 @@
 
 .social-badges-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    /* Clean 2-column grid */
+    gap: 20px;
     width: 100%;
     margin-top: 30px;
-    justify-items: center;
-    align-items: start;
+    align-items: stretch;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Animated Social Arrows ── */
+.social-arrow {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.social-arrow.arrow-1 {
+    top: 55px;
+    /* Roughly aligned with profile picture heights */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 30px;
+}
+
+.social-arrow.arrow-2 {
+    top: 130px;
+    /* Below the top cards */
+    right: 25%;
+    width: 40px;
+    height: 60px;
+}
+
+.animated-line {
+    stroke-dashoffset: 0;
+    animation: marching-ants 1.5s linear infinite;
+}
+
+@keyframes marching-ants {
+    from {
+        stroke-dashoffset: 24;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Make Facebook (3rd item) full-width below the other two */
+.social-badges-container>*:nth-child(3) {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 @media (max-width: 992px) {
@@ -142,6 +191,18 @@
 }
 
 @media (max-width: 768px) {
+    .social-arrows {
+        display: none;
+    }
+
+    .social-arrow {
+        display: none;
+    }
+
+    .social-badges-container {
+        grid-template-columns: 1fr;
+    }
+
     .th-experience-badge {
         position: relative;
         bottom: auto;

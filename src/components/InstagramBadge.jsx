@@ -16,7 +16,7 @@ export default function InstagramBadge() {
     }, []);
 
     return (
-        <div style={{ marginTop: '30px', width: '100%', maxWidth: '340px' }}>
+        <div style={{ width: '100%', maxWidth: '340px', display: 'flex', justifySelf: 'center' }}>
             <blockquote
                 className="instagram-media"
                 data-instgrm-permalink="https://www.instagram.com/madhuri.100369/?utm_source=ig_embed&amp;utm_campaign=loading"
