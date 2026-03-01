@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
@@ -7,16 +7,17 @@ export default function Footer() {
         <footer className="footer-wrapper">
             <div className="container footer-content">
                 <div className="footer-col branding-col">
-                    <div className="logo-placeholder" style={{ marginBottom: '20px' }}>
+                    <div className="logo-placeholder">
                         <span className="logo-text" style={{ color: 'var(--white)' }}>PALASH <span style={{ color: 'var(--palash-orange)' }}>Training</span></span>
-                        <span className="logo-sub" style={{ color: 'var(--glass-border)' }}>a journey towards skill development</span>
+                        <span className="logo-sub" style={{ color: 'var(--glass-border)' }}>A journey towards skill development</span>
                     </div>
                     <p className="footer-bio">Empowering the next generation with modern, effective language and communication skills.</p>
                     <div className="social-icons">
-                        <a href="#" className="social-link"><Facebook size={20} /></a>
-                        <a href="#" className="social-link"><Instagram size={20} /></a>
-                        <a href="#" className="social-link"><Linkedin size={20} /></a>
-                        <a href="#" className="social-link"><Twitter size={20} /></a>
+                        <a href="#" className="social-link" aria-label="LinkedIn"><Linkedin size={20} /></a>
+                        <a href="#" className="social-link" aria-label="Facebook"><Facebook size={20} /></a>
+                        <a href="#" className="social-link" aria-label="Instagram"><Instagram size={20} /></a>
+                        <a href="#" className="social-link" aria-label="Twitter"><Twitter size={20} /></a>
+                        <a href="#" className="social-link" aria-label="YouTube"><Youtube size={20} /></a>
                     </div>
                 </div>
 
