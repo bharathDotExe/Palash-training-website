@@ -13,9 +13,9 @@ export default function Footer() {
                     </div>
                     <p className="footer-bio">Empowering the next generation with modern, effective language and communication skills.</p>
                     <div className="social-icons">
-                        <a href="#" className="social-link" aria-label="LinkedIn"><Linkedin size={20} /></a>
-                        <a href="#" className="social-link" aria-label="Facebook"><Facebook size={20} /></a>
-                        <a href="#" className="social-link" aria-label="Instagram"><Instagram size={20} /></a>
+                        <a href="https://www.linkedin.com/in/madhuri-bedekar-75840920/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn"><Linkedin size={20} /></a>
+                        <a href="https://www.facebook.com/palash.training/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook"><Facebook size={20} /></a>
+                        <a href="https://www.instagram.com/madhuri.100369" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram"><Instagram size={20} /></a>
                         <a href="#" className="social-link" aria-label="Twitter"><Twitter size={20} /></a>
                         <a href="#" className="social-link" aria-label="YouTube"><Youtube size={20} /></a>
                     </div>

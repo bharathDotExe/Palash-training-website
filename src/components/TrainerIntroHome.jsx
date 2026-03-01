@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
 import trainerPhoto from '../assets/trainer-photo.png';
+import { Linkedin } from 'lucide-react';
+import LinkedInBadge from './LinkedInBadge';
+import InstagramBadge from './InstagramBadge';
+import FacebookBadge from './FacebookBadge';
 import './TrainerIntroHome.css';
 
 export default function TrainerIntroHome() {
@@ -41,7 +45,24 @@ export default function TrainerIntroHome() {
                         Whether it's workplace communication, official presentations, IELTS preparation, or interview readiness, my sessions focus on clarity, confidence, and professional presence. My mission is not merely to improve language skills, but to help individuals rediscover their voice and step forward with authority.
                     </p>
 
-                    <Link to="/about" className="btn btn-primary" style={{ marginTop: '20px' }}>Read Full Profile</Link>
+                    <div style={{ display: 'flex', gap: '15px', marginTop: '20px', alignItems: 'center' }}>
+                        <Link to="/about" className="btn btn-primary">Read Full Profile</Link>
+                        <a
+                            href="https://www.linkedin.com/in/madhuri-bedekar-75840920/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-outline"
+                            style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+                        >
+                            <Linkedin size={20} /> Connect on LinkedIn
+                        </a>
+                    </div>
+
+                    <div className="social-badges-container">
+                        <LinkedInBadge />
+                        <InstagramBadge />
+                        <FacebookBadge />
+                    </div>
                 </div>
 
             </div>

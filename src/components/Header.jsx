@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, Phone, Mail, Linkedin, Instagram, Youtube } from 'lucide-react';
+import { Menu, X, Phone, Mail, Linkedin, Instagram, Youtube, Facebook } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
@@ -87,8 +87,9 @@ export default function Header({ onBookDemo }) {
             </a>
           </div>
           <div className="contact-right">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn"><Linkedin size={18} /></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram"><Instagram size={18} /></a>
+            <a href="https://www.linkedin.com/in/madhuri-bedekar-75840920/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn"><Linkedin size={18} /></a>
+            <a href="https://www.facebook.com/palash.training/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook"><Facebook size={18} /></a>
+            <a href="https://www.instagram.com/madhuri.100369" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram"><Instagram size={18} /></a>
             <a href="#" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="YouTube"><Youtube size={18} /></a>
           </div>
         </div>
