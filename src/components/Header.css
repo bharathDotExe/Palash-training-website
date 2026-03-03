@@ -188,9 +188,15 @@
 }
 
 .logo-img {
-    height: 40px;
+    height: 44px;
     width: auto;
     object-fit: contain;
+    filter: brightness(1.15) saturate(1.4) drop-shadow(0 2px 8px rgba(233, 85, 36, 0.55));
+    transition: filter 0.3s ease;
+}
+
+.logo-img:hover {
+    filter: brightness(1.25) saturate(1.6) drop-shadow(0 3px 14px rgba(233, 85, 36, 0.75));
 }
 
 .logo-text-block {
@@ -530,7 +536,8 @@
     }
 
     .logo-img {
-        height: 34px;
+        height: 40px;
+        filter: brightness(1.15) saturate(1.4) drop-shadow(0 2px 8px rgba(233, 85, 36, 0.55));
     }
 
     .logo-text {
