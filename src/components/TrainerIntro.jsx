@@ -26,6 +26,65 @@ const sessionFocus = [
     'Turning silent potential into confident expression.',
 ];
 
+const previousSessions = [
+    {
+        category: "Corporate sector, Bank & IT sector– All management levels",
+        topics: [
+            "Leadership skills",
+            "Conflict management",
+            "Business communication skills",
+            "Hierarchy, Discipline, work ethics",
+            "Email Etiquette / telephone etiquette",
+            "Soft skills",
+            "Presentation skills",
+            "English lessons – grammar, summary writing, passage writing",
+            "Understanding British & American English",
+            "Writing emails, Using proper salutations",
+            "Email etiquette – dos & don'ts, changing trends of emails",
+            "Mobile etiquette - Messaging etiquette",
+            "Meeting Etiquette",
+            "TEAM work",
+            "TIME Management",
+            "Confidence building",
+            "Attending virtual meetings – dos & don'ts",
+            "Story telling",
+            "Train the Trainer",
+        ]
+    },
+    {
+        category: "IELTS sessions – Academic & General",
+        topics: [
+            "Reading – types of reading styles, looking for answers, match the following, matching the headings",
+            "Writing, - Letter writing – 150 words & Essay writing – 250 words. Different methods of writing both for General & Academic. Type of essays and letters",
+            "Listening – Practicing audio from reliable sources, understanding different accents, catching the right answers in all 4 sections",
+            "Speaking – practicing all three rounds of interview with expected questions",
+        ]
+    },
+    {
+        category: "Management & Engineering colleges",
+        topics: [
+            "Interview skills for corporate interviews, communication skills, English grammar",
+            "Soft skills – body language, grooming, personality development",
+        ]
+    },
+    {
+        category: "Hospitals",
+        topics: [
+            "Front desk – Good communication skills, multi-tasking, discipline, attentiveness",
+            "Nursing - soft skills & communication skills",
+            "House-keeping – behavioral skills, team work",
+        ]
+    },
+    {
+        category: "Batches for airport ground staff",
+        topics: [
+            "Understanding different pronunciations & accents",
+            "Airport vocabulary",
+            "English lessons",
+        ]
+    }
+];
+
 const bioParas = [
     `With nearly 25 years of diverse corporate experience, I bring depth, insight, and authenticity to the world of communication training. My professional journey began as a Book Promotion In-charge with a leading medical publishing house, gradually expanding into Public Relations, Business Development, Corporate Communication, and Media Management. Through both full-time roles and freelance assignments, I gained extensive exposure to corporate dynamics and professional growth environments.`,
     `Throughout my career, one strength was consistently distinguished — my command over language and communication. It became the foundation of my success, earning me recognition and trust across organizations. Some of my colleagues and juniors naturally turned to me for guidance in improving their English, structuring their thoughts, and presenting themselves confidently (it was not the time of AI but purely authentic and original language skills). What began as informal mentoring soon revealed my true calling.`,
@@ -156,6 +215,26 @@ export default function TrainerIntro() {
                             <div key={i} className="focus-card glass">
                                 <CheckCircle2 size={22} className="focus-check" />
                                 <p>{point}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* ── Previous Sessions ── */}
+                <div className="about-previous-sessions-section">
+                    <div className="text-center" style={{ marginBottom: '40px', marginTop: '60px' }}>
+                        <span className="about-eyebrow">Experience</span>
+                        <h2 className="section-title">My Previously Training Conducted Sessions <br /><span className="text-gradient" style={{ fontSize: '1.5rem', fontWeight: '600', marginTop: '10px', display: 'inline-block' }}>English language, Communication skills & Soft skills</span></h2>
+                    </div>
+                    <div className="previous-sessions-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+                        {previousSessions.map((session, i) => (
+                            <div key={i} className="session-card glass" style={{ padding: '32px', borderRadius: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                <h3 style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--text-dark)', lineHeight: '1.4' }}>{i + 1}. {session.category}</h3>
+                                <ul style={{ listStyleType: 'disc', paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                    {session.topics.map((topic, j) => (
+                                        <li key={j} style={{ fontSize: '0.95rem', color: 'var(--text-light)', lineHeight: '1.5' }}>{topic}</li>
+                                    ))}
+                                </ul>
                             </div>
                         ))}
                     </div>

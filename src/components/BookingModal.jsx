@@ -38,10 +38,16 @@ export default function BookingModal({ onClose }) {
                         <div className="form-group">
                             <select id="modal-course" required defaultValue="">
                                 <option value="" disabled>Select a Program</option>
-                                <option value="spoken">Spoken English</option>
-                                <option value="ielts">IELTS Preparation</option>
-                                <option value="soft-skills">Soft Skills</option>
-                                <option value="corporate">Corporate Training</option>
+                                <option value="ielts-general">IELTS General</option>
+                                <option value="ielts-academic">IELTS Academic</option>
+                                <option value="train-the-trainer">Train the Trainer</option>
+                                <option value="english-communication">English communication - Speaking & writing</option>
+                                <option value="corporate-training">Corporate training - Business communication</option>
+                                <option value="interview-preparation">Interview preparation</option>
+                                <option value="confidence-building">Confidence Building</option>
+                                <option value="public-speaking">Public Speaking</option>
+                                <option value="leadership-skills">Leadership Skills</option>
+                                <option value="presentation-skills">Presentation skills</option>
                             </select>
                         </div>
 

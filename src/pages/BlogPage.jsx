@@ -14,7 +14,7 @@ export default function BlogPage() {
                 <div className="container" style={{ maxWidth: '1400px' }}>
                     <div className="bp-header text-center">
                         <span className="bp-eyebrow">Insights & Stories</span>
-                        <h1 className="bp-title">Our <span className="text-gradient">Blog</span></h1>
+                        <h1 className="bp-title"><span className="text-gradient">Blog</span></h1>
                         <p className="bp-subtitle">Expert articles, communication strategies, and real-world career transformations.</p>
                     </div>
 

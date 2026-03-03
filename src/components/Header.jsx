@@ -117,7 +117,7 @@ export default function Header({ onBookDemo }) {
 
             {/* Right Actions */}
             <div className="nav-right">
-              <button className="nav-cta desktop-cta" onClick={onBookDemo}>Book Demo</button>
+              <button className="nav-cta desktop-cta" onClick={onBookDemo}>Book a Free Demo</button>
               <button className="hamburger-btn" onClick={toggleMobileMenu} aria-label="Toggle menu">
                 <Menu size={24} />
               </button>
@@ -151,7 +151,7 @@ export default function Header({ onBookDemo }) {
           ))}
         </ul>
         <div className="drawer-cta-wrap">
-          <button className="nav-cta drawer-cta" onClick={handleBookDemo}>Book Demo</button>
+          <button className="nav-cta drawer-cta" onClick={handleBookDemo}>Book a Free Demo</button>
         </div>
       </nav>
     </>

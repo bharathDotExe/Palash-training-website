@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="container footer-content">
                 <div className="footer-col branding-col">
                     <div className="logo-placeholder">
-                        <span className="logo-text" style={{ color: 'var(--white)' }}>PALASH <span style={{ color: 'var(--palash-orange)' }}>Training</span></span>
+                        <span className="logo-text" style={{ color: '#e95524' }}>PALASH <span style={{ color: '#e95524' }}>Training</span></span>
                         <span className="logo-sub" style={{ color: 'var(--glass-border)' }}>A journey towards skill development</span>
                     </div>
                     <p className="footer-bio">Empowering the next generation with modern, effective language and communication skills.</p>

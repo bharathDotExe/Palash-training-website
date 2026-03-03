@@ -201,18 +201,20 @@
 }
 
 .logo-text {
-    font-weight: 800;
+    font-family: 'Chonburi', cursive;
+    font-weight: 400;
     font-size: 24px;
     line-height: 1;
-    color: var(--palash-red);
+    color: #e95524;
     letter-spacing: 0.5px;
     white-space: nowrap;
 }
 
 .logo-text span {
+    font-family: 'Chonburi', cursive;
     font-size: 20px;
-    color: var(--text-dark);
-    font-weight: 700;
+    color: #e95524;
+    font-weight: 400;
 }
 
 .logo-sub {
