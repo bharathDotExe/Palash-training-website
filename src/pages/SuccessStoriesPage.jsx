@@ -54,8 +54,12 @@ export default function SuccessStoriesPage() {
                                 <span className="sp-edge-icon">04</span>
                                 <span>Influencing Leadership</span>
                             </a>
-                            <a href="#video-testimonials" className={`sp-nav-edge ${activeSection === 'video-testimonials' ? 'active' : ''}`}>
+                            <a href="#story-healing" className={`sp-nav-edge ${activeSection === 'story-healing' ? 'active' : ''}`}>
                                 <span className="sp-edge-icon">05</span>
+                                <span>Healing & Helping</span>
+                            </a>
+                            <a href="#video-testimonials" className={`sp-nav-edge ${activeSection === 'video-testimonials' ? 'active' : ''}`}>
+                                <span className="sp-edge-icon">06</span>
                                 <span>Video Stories</span>
                             </a>
                         </nav>
@@ -228,6 +232,46 @@ export default function SuccessStoriesPage() {
 
                                     <p>But the real validation came later. The same officials who were once reluctant recommended a batch of 20 senior team members for the same training. They didn’t just accept the program. They believed in it.</p>
                                     <p>I worked with senior professionals to strengthen the one skill…but they left with many.</p>
+                                </div>
+                            </div>
+
+                            {/* Story 5 */}
+                            <div id="story-healing" className="sp-story-card glass" style={{ marginTop: '40px' }}>
+                                <div className="sp-story-content">
+                                    <h3 className="sp-story-title">Healing Comes in Unexpected Ways</h3>
+                                    <p className="sp-story-highlight">OET coaching · Two physiotherapists · Visa to UK 🇬🇧</p>
+
+                                    <p>It was a routine physiotherapy session at a hospital, and I was lying quietly on the treatment bed, struggling with severe lower back disc pain.</p>
+                                    <p>For days, I had been praying for one thing — to recover and return to work.</p>
+                                    <p>As I lay there, I overheard a physiotherapist speaking on the phone. She was discussing her struggle to clear the IELTS exam and move to the UK for work. Her voice carried frustration about exam scores, coaching fees, and uncertainty about the quality of training she was considering.</p>
+                                    <p>It caught my attention.</p>
+                                    <p>Later, as I was about to leave, I heard her again. This time speaking about how the fees were beyond her reach. She wasn't even sure if the classes would genuinely help her.</p>
+                                    <p>I waited. When she finished the call, I approached her.</p>
+                                    <p>After a brief conversation, I understood her English proficiency was around A2 level. She had the ambition, but not the direction. I also discovered that one of her colleagues had the same goal and the same confusion.</p>
+
+                                    <h4>The Key Insight</h4>
+                                    <p>They were preparing for <strong>IELTS</strong>. But what they actually needed was the <strong>Occupational English Test (OET)</strong>, not the International English Language Testing System (IELTS).</p>
+                                    <p>They didn't know the difference.</p>
+
+                                    <p>Understanding their financial limitations, I made a decision. I offered them <strong>50% off</strong> my regular fee and allowed both of them to attend together under one payment structure. It was a huge relief for them.</p>
+
+                                    <h4>The Training</h4>
+                                    <p>The sessions began. We worked intensively for two months, correcting fundamentals and building the desired vocabulary, strengthening writing structure, refining speaking clarity, and improving listening accuracy specific to healthcare scenarios.</p>
+
+                                    <ul className="sp-story-checklist">
+                                        <li>Correcting grammar fundamentals</li>
+                                        <li>Healthcare-specific vocabulary</li>
+                                        <li>Writing structure for OET</li>
+                                        <li>Speaking clarity &amp; confidence</li>
+                                        <li>Listening accuracy for clinical scenarios</li>
+                                    </ul>
+
+                                    <h4>The Result</h4>
+                                    <p>They appeared for the test. They took 2–3 attempts but cleared and reached their goal. They received their visas. The joy in their voices when they called me was my real reward.</p>
+
+                                    <p>But something else was happening quietly. As they were learning, I was also healing. While helping them rebuild confidence, I was rebuilding my own strength. Their progress gave me purpose during my recovery.</p>
+
+                                    <p className="sp-story-quote">"Sometimes, when we help others move forward, we unknowingly move forward ourselves."</p>
                                 </div>
                             </div>
 

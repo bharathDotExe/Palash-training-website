@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, BookOpen, Users, User } from 'lucide-react';
+import { Home, BookOpen, Users, Phone } from 'lucide-react';
 import './BottomNav.css';
 
 export default function BottomNav() {
@@ -17,9 +17,9 @@ export default function BottomNav() {
                 <Users size={20} />
                 <span>Community</span>
             </a>
-            <a href="#profile" className="nav-item">
-                <User size={20} />
-                <span>Profile</span>
+            <a href="/contact" className="nav-item">
+                <Phone size={20} />
+                <span>Contact Us</span>
             </a>
         </nav>
     );

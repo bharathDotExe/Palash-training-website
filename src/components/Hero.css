@@ -83,6 +83,11 @@
     margin-bottom: 30px;
 }
 
+/* Hide Contact Us hero button on desktop — top nav already has it */
+.hero-contact-btn {
+    display: none;
+}
+
 .hero-stats {
     display: flex;
     gap: 30px;
@@ -282,6 +287,10 @@
         flex-direction: column;
         gap: 16px;
         margin-bottom: 24px;
+    }
+
+    .hero-contact-btn {
+        display: block;
     }
 
     .hero-ctas .btn {

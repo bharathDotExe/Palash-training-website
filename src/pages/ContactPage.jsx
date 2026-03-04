@@ -54,8 +54,8 @@ export default function ContactPage() {
                                 <li style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
                                     <div className="info-icon text-gradient" style={{ flexShrink: 0, marginTop: '2px' }}><MapPin size={24} /></div>
                                     <div className="info-text">
-                                        <strong style={{ display: 'block', fontSize: '1.1rem', marginBottom: '4px' }}>Visit Us</strong>
-                                        <p style={{ color: 'var(--text-light)' }}>123 Education Lane, Tech Hub City, 400001</p>
+                                        <strong style={{ display: 'block', fontSize: '1.1rem', marginBottom: '4px' }}>Our Location</strong>
+                                        <p style={{ color: 'var(--text-light)' }}>K R Puram, Bangalore, Karnataka, India</p>
                                     </div>
                                 </li>
                                 <li style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
@@ -81,12 +81,18 @@ export default function ContactPage() {
                                 </li>
                             </ul>
 
-                            {/* Map Placeholder */}
-                            <div className="map-placeholder mt-32" style={{ marginTop: '40px' }}>
-                                <div style={{ height: '200px', background: 'rgba(0,0,0,0.03)', borderRadius: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(0,0,0,0.05)' }}>
-                                    <MapPin size={40} className="text-gradient" style={{ opacity: 0.5 }} />
-                                    <span style={{ marginLeft: '10px', color: 'var(--text-light)', fontWeight: 500 }}>Interactive Map Here</span>
-                                </div>
+                            {/* Google Map - Bangalore */}
+                            <div style={{ marginTop: '40px', borderRadius: '15px', overflow: 'hidden', border: '1px solid rgba(0,0,0,0.08)' }}>
+                                <iframe
+                                    title="Our Location - Bangalore"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497699.9973874144!2d77.35074421903857!3d12.95384772557775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1709900000000!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="220"
+                                    style={{ border: 0, display: 'block' }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                />
                             </div>
                         </div>
                     </div>

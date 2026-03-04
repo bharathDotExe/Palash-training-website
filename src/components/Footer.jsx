@@ -45,8 +45,8 @@ export default function Footer() {
                 <div className="footer-col">
                     <h4 className="footer-heading">Contact Us</h4>
                     <ul className="footer-contact">
-                        <li><MapPin size={18} className="contact-icon" /> 123 Education Lane, Tech Hub City, 400001</li>
-                        <li><Phone size={18} className="contact-icon" /> +91 98765 43210</li>
+                        <li><MapPin size={18} className="contact-icon" /> K R Puram, Bangalore, Karnataka, India</li>
+                        <li><Phone size={18} className="contact-icon" /> +91 96408 16324</li>
                         <li><Mail size={18} className="contact-icon" /> Palash.training@gmail.com</li>
                     </ul>
                 </div>

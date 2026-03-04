@@ -26,6 +26,22 @@ export default function TrainerIntroHome() {
                         </div>
                     </div>
 
+                    {/* Founder tag – sits below the photo box, above highlights */}
+                    <div style={{ textAlign: 'center', marginTop: '28px' }}>
+                        <span style={{
+                            display: 'inline-block',
+                            background: 'linear-gradient(135deg, var(--palash-orange), #ff7043)',
+                            color: '#fff',
+                            fontWeight: 700,
+                            fontSize: '0.85rem',
+                            letterSpacing: '2px',
+                            textTransform: 'uppercase',
+                            padding: '5px 22px',
+                            borderRadius: '50px',
+                            boxShadow: '0 4px 14px rgba(255, 94, 0, 0.35)',
+                        }}>Founder</span>
+                    </div>
+
                     <div className="th-highlights-card glass">
                         <p className="th-highlight-item">✨ Corporate Communication Specialist</p>
                         <p className="th-highlight-item">✨ British Council Certified</p>
