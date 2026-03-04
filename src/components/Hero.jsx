@@ -13,7 +13,7 @@ export default function Hero({ onBookDemo }) {
                     </p>
                     <div className="hero-ctas">
                         <button className="btn btn-primary" onClick={onBookDemo}>Start Learning</button>
-                        <button className="btn btn-outline">Explore Programs</button>
+                        <a href="/services" className="btn btn-outline">Explore Programs</a>
                         <a href="/contact" className="btn btn-outline hero-contact-btn">📞 Contact Us</a>
                     </div>
 
