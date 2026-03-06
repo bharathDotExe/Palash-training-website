@@ -131,7 +131,7 @@ export default function Header({ onBookDemo }) {
               <img src="/logo.png" alt="Palash Logo" className="logo-img" />
               <div className="logo-text-block">
                 <span className="logo-text">PALASH <span>Training</span></span>
-                <span className="logo-sub">A journey towards skill development</span>
+                <span className="logo-sub"><b><i>Transforming you..Silence to Confidence</i></b></span>
               </div>
             </Link>
 

@@ -443,8 +443,28 @@
    8. RESPONSIVE BREAKPOINTS
    ================================================================ */
 
-/* ── Tablet & smaller desktop (≤1024px) ── */
-@media (max-width: 1024px) {
+/* ── Compact desktop (≤1350px) ── */
+@media (max-width: 1350px) {
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .glass-pill {
+        padding: 0 16px;
+    }
+
+    .nav-cta {
+        padding: 0 16px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ── Tablet & smaller desktop (≤1199px) ── */
+@media (max-width: 1199px) {
     .nav-links {
         display: none;
     }

@@ -1,6 +1,24 @@
+import { useState, useEffect } from 'react';
+import { Volume2, VolumeX } from 'lucide-react';
 import './Hero.css';
 
 export default function Hero({ onBookDemo }) {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isMuted, setIsMuted] = useState(true);
+
+    const slides = [
+        '/slide1.jpg',
+        '/slide2.png',
+        '/slide3.jpg',
+        '/slide4.png'
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 2500); // 2.5 seconds gap
+        return () => clearInterval(timer);
+    }, [slides.length]);
     return (
         <section className="hero-section">
             <div className="container hero-content">
@@ -31,7 +49,26 @@ export default function Hero({ onBookDemo }) {
 
                 <div className="hero-graphics">
                     <div className="image-wrapper glass">
-                        <img src="/genz_students.png" alt="Gen-Z Students Learning" className="hero-img" />
+                        <div className="slideshow-container">
+                            {slides.map((src, index) => (
+                                <img
+                                    key={src}
+                                    src={src}
+                                    alt={`Slide ${index + 1}`}
+                                    className={`hero-img slide-image ${index === currentSlide ? 'active' : ''}`}
+                                />
+                            ))}
+                        </div>
+
+                        {/* Background Music Player */}
+                        <audio id="hero-audio" src="/music.ogg" autoPlay loop muted={isMuted} />
+                        <button
+                            className="audio-control glass"
+                            onClick={() => setIsMuted(!isMuted)}
+                            aria-label={isMuted ? "Unmute Music" : "Mute Music"}
+                        >
+                            {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+                        </button>
                     </div>
                     <div className="decor-circle"></div>
 
