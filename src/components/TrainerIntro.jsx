@@ -1,4 +1,4 @@
-import { Award, CheckCircle2, Sparkles, Quote } from 'lucide-react';
+import { Award, CheckCircle2, Sparkles, Quote, Download } from 'lucide-react';
 import './TrainerIntro.css';
 import trainerPhoto from '../assets/trainer-photo.png';
 
@@ -159,6 +159,17 @@ export default function TrainerIntro() {
                                 </div>
                             ))}
                         </div>
+
+                        <a
+                            href="https://ik.imagekit.io/dvl5mhvik/Madhuri%20Bedekar%20Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download
+                            className="download-resume-btn"
+                        >
+                            <Download size={20} />
+                            <span>Download Resume</span>
+                        </a>
                     </div>
                 </div>
 
