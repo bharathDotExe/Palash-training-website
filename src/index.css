@@ -43,6 +43,24 @@ body {
   scroll-behavior: smooth;
   scroll-padding-top: 170px;
   /* Account for fixed header plus sticky nav */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* ── Global Responsive Safety ── */
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
 }
 
 /* Glassmorphism Utilities */

@@ -23,6 +23,7 @@
 /* ─── Page Layout ───────────────────────────────────────────── */
 .sp-layout {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
     align-items: flex-start;
     max-width: 1300px;

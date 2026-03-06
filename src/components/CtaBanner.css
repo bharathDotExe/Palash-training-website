@@ -7,10 +7,12 @@
     background: linear-gradient(135deg, var(--palash-orange), var(--palash-red));
     background-attachment: fixed;
     border-radius: 30px;
-    padding: 60px 80px;
+    padding: clamp(30px, 5vw, 60px) clamp(24px, 6vw, 80px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
     color: var(--white);
     border: none;
     position: relative;
@@ -24,7 +26,7 @@
 }
 
 .cta-text h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
     font-weight: 800;
     margin-bottom: 15px;
 }

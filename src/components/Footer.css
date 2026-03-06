@@ -1,7 +1,7 @@
 .footer-wrapper {
     background: var(--text-dark);
     color: var(--white);
-    padding-top: 120px;
+    padding-top: clamp(40px, 8vw, 120px);
 }
 
 .footer-content {

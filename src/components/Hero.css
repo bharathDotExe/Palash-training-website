@@ -1,6 +1,6 @@
 .hero-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: clamp(60px, 8vw, 120px);
+    padding-bottom: clamp(60px, 8vw, 120px);
     min-height: auto;
     display: flex;
     align-items: center;
@@ -18,34 +18,30 @@
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     gap: 32px;
-
-    @media (max-width: 1199px) {
-        .hero-section {
-            padding-top: 80px;
-            padding-bottom: 80px;
-        }
-
-        .hero-content {
-            gap: 24px;
-        }
-    }
-
-    @media (max-width: 767px) {
-        .hero-section {
-            padding-top: 60px;
-            padding-bottom: 60px;
-        }
-
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-    }
-
-    align-items: center;
+    align-items: stretch;
     position: relative;
     z-index: 10;
+}
+
+/* Tablet adjustments */
+@media (max-width: 1199px) {
+    .hero-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .hero-content {
+        gap: 24px;
+    }
+}
+
+/* Mobile – stacked layout */
+@media (max-width: 767px) {
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
 }
 
 .hero-content.container {
@@ -63,7 +59,7 @@
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
     font-weight: 800;
     margin-bottom: 15px;
     color: var(--text-dark);
@@ -229,13 +225,13 @@
 }
 
 .badge-2 {
-    bottom: 40px;
+    bottom: 80px;
     right: -100px;
     animation-delay: 2s;
 }
 
 .badge-3 {
-    top: 150px;
+    top: 110px;
     right: -120px;
     animation-delay: 4s;
 }

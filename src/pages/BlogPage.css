@@ -54,8 +54,9 @@
 }
 
 .blob-1 {
-    width: 600px;
-    height: 600px;
+    max-width: 600px;
+    width: 100%;
+    aspect-ratio: 1;
     background: radial-gradient(circle, rgba(255, 94, 0, 0.15), transparent);
     top: -100px;
     left: -100px;
@@ -63,8 +64,9 @@
 }
 
 .blob-2 {
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 1;
     background: radial-gradient(circle, rgba(230, 42, 43, 0.12), transparent);
     bottom: -100px;
     right: -100px;
@@ -224,6 +226,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
     padding-top: 16px;
     border-top: 1px dashed rgba(0, 0, 0, 0.1);
 }
@@ -265,6 +269,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
     margin-bottom: 30px;
 }
 
@@ -420,7 +426,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 35px 45px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: clamp(20px, 4vw, 35px) clamp(20px, 4vw, 45px);
     background: linear-gradient(135deg, rgba(255, 94, 0, 0.03), rgba(230, 42, 43, 0.03));
     border-left: 5px solid var(--palash-orange);
     border-radius: 20px;
