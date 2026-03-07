@@ -81,7 +81,7 @@ export default function Header({ onBookDemo }) {
               <Phone size={18} color="#f9a825" />
               +91 96408 16324
             </a>
-            <a href="mailto:Palash.training@gmail.com" className="contact-link email hide-on-mobile">
+            <a href="mailto:palash.training@gmail.com" className="contact-link email">
               <Mail size={18} color="#f9a825" />
               Palash.training@gmail.com
             </a>

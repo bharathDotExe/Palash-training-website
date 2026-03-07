@@ -159,9 +159,23 @@
 }
 
 /* ── Responsive ── */
+@media (max-width: 1199px) {
+    .testimonials-home-section {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}
+
 @media (max-width: 960px) {
     .th-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonials-home-section {
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 }
 
