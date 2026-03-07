@@ -23,9 +23,10 @@ export default function LinkedInBadge() {
     }, []);
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className="th-badge-wrapper" style={{ display: 'flex', justifyContent: 'center', width: '100%', margin: '0 auto', overflow: 'hidden' }}>
             <div
                 className="badge-base LI-profile-badge"
+                style={{ margin: '0 auto' }}
                 data-locale="en_US"
                 data-size="large"
                 data-theme="light"

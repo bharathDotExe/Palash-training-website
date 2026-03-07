@@ -61,7 +61,7 @@ export default function TrainerIntroHome() {
                         Whether it's workplace communication, official presentations, IELTS preparation, or interview readiness, my sessions focus on clarity, confidence, and professional presence. My mission is not merely to improve language skills, but to help individuals rediscover their voice and step forward with authority.
                     </p>
 
-                    <div style={{ display: 'flex', gap: '15px', marginTop: '20px', alignItems: 'center' }}>
+                    <div className="th-cta-group" style={{ display: 'flex', gap: '15px', marginTop: '20px', alignItems: 'center' }}>
                         <Link to="/about" className="btn btn-primary">Read Full Profile</Link>
                         <a
                             href="https://www.linkedin.com/in/madhuri-bedekar-75840920/"
