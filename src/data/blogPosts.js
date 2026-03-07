@@ -35,7 +35,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/micromanagement-productive-counterproductive-madhuri-bedekar-cpngc/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 3,
@@ -51,7 +51,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/changing-trends-email-salutations-new-approach-madhuri-bedekar-ukipc/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 4,
@@ -67,7 +67,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/who-actual-leader-madhuri-bedekar-unnkc/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 5,
@@ -83,7 +83,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/how-i-assessed-madhuri-bedekar-z8wkc/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 6,
@@ -99,7 +99,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/interview-madhuri-bedekar-jcalc/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 7,
@@ -115,7 +115,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/survival-strongest-madhuri-bedekar-mbicc/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 8,
@@ -131,7 +131,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/inside-out-madhuri-bedekar-go5fc/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 9,
@@ -147,7 +147,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/mindful-mindless-madhuri-bedekar-wjl6c/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 10,
@@ -163,7 +163,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/substance-abuse-use-madhuri-bedekar-ycblc/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 11,
@@ -179,7 +179,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/why-arent-we-listening-madhuri-bedekar-ralae/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 12,
@@ -195,7 +195,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/i-left-some-behind-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 13,
@@ -211,7 +211,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/endless-spam-calls-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 14,
@@ -227,7 +227,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/what-does-your-dp-convey-you-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 15,
@@ -243,7 +243,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/fireworks-its-impact-humans-animals-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 16,
@@ -259,7 +259,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/training-trainer-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 17,
@@ -275,7 +275,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/colors-speak-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 18,
@@ -291,7 +291,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/cutting-branches-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 19,
@@ -307,7 +307,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/can-recruiters-hear-us-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 20,
@@ -323,7 +323,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/procrastination-managing-deadlines-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 21,
@@ -339,7 +339,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/sunblock-sunscreen-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 22,
@@ -355,7 +355,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/we-walk-faith-sight-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 23,
@@ -371,7 +371,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/rising-abovestep-up-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 24,
@@ -387,7 +387,7 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/window-madhuri-bedekar/",
-        isExternal: false
+        isExternal: true
     },
     {
         id: 25,
@@ -403,6 +403,36 @@ export const blogPosts = [
       <p>Read more about this topic and discover valuable insights for your professional development.</p>
     `,
         link: "https://www.linkedin.com/pulse/pills-over-counter-choice-necessity-madhuri-bedekar/",
+        isExternal: true
+    },
+    {
+        id: 26,
+        title: "Professional Disagreement & Mutual Understanding",
+        date: "March 7, 2024",
+        author: "N. Madhuri Bedekar",
+        authorImage: trainerPhoto,
+        category: "Professional Development",
+        readTime: "3 min read",
+        excerpt: "Even if we are aware that the other person is saying correct or giving a better suggestion, our mind refuses to accept it. Professional communication is not about avoiding disagreement, it is about expressing your thoughts respectfully and constructively.",
+        content: `
+      <p>Even if we are aware that the other person is saying correct or giving a better suggestion, our mind refuses to accept it. Similarly, during one of the discussions at work, I realised how easily a disagreement can turn into an argument.</p>
+      <p>Both of us (me and my colleague) were strongly trying to prove our point. Neither of us was ready to agree, and the conversation was going in circles. At that moment, I paused and decided to listen carefully to my colleague’s perspective.</p>
+      <p>I realised something important: she wasn’t wrong. In fact, we were both trying to achieve the same goal, just through different approaches. That experience reminded me that our perspective is not always the only correct one. Others also bring their own experience and insights to the table.</p>
+      <p>In professional settings, disagreement is natural. What really matters is how we express it. When I listened to her patiently, she also chose to listen to my point of view. That day I learnt a very valuable lesson.</p>
+      <p>Our perception cannot always be the only correct one. Other people also bring their own experience, knowledge, and perspective to the table. And in any professional environment, mutual understanding is essential to move forward.</p>
+      <p>Disagreement is a natural part of discussions in meetings. However, the way we express disagreement makes a big difference. In professional settings, it is important to share your opinion respectfully without sounding rude or confrontational. That experience also reminded me not to take things personally. Not every suggestion of mine will be accepted, and that is perfectly fine. Professional discussions should never become an ego battle.</p>
+      <p>Over time, I have started using a few phrases that help express disagreement politely and professionally. Sharing a few of them:</p>
+      <ul>
+        <li>👉 “I see your point; however, I have a slightly different perspective.”</li>
+        <li>👉 “That’s an interesting idea. May I suggest another option?” This keeps the discussion positive and solution-oriented.</li>
+        <li>👉 “I understand the reasoning, but perhaps we should also consider…”</li>
+        <li>👉 “From my experience, a different approach might work better.”</li>
+        <li>👉 “Could we explore another possibility before making a final decision?”</li>
+      </ul>
+      <p>These simple ways of putting my ideas across help maintain respect while still allowing you to share your viewpoint.</p>
+      <p><strong>The bottom line is this: Professional communication is not about avoiding disagreement, it is about expressing your thoughts respectfully and constructively.</strong></p>
+    `,
+        link: "https://www.linkedin.com/posts/activity-7435752759544455168-OGFv",
         isExternal: false
     }
 ];
