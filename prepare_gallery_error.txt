@@ -1,0 +1,63 @@
+﻿node : file:///C:/Users
+/bhara/Downloads/web%20
+agency/palash%20trainin
+g.com/prepare_gallery.j
+s:1
+At line:1 char:1
++ node 
+prepare_gallery.js 
+2>&1 | Out-File 
+-Encoding utf8 
+prepare_galler ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (file:///C:/Us   
+ er...re_gallery.js    
+:1:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+const fs = 
+require('fs');
+           ^
+
+ReferenceError: 
+require is not defined 
+in ES module scope, 
+you can use import 
+instead
+This file is being 
+treated as an ES 
+module because it has 
+a '.js' file extension 
+and 'C:\Users\bhara\Dow
+nloads\web 
+agency\palash training.
+com\package.json' 
+contains "type": 
+"module". To treat it 
+as a CommonJS script, 
+rename it to use the 
+'.cjs' file extension.
+    at file:///C:/Users
+/bhara/Downloads/web%20
+agency/palash%20trainin
+g.com/prepare_gallery.j
+s:1:12
+    at ModuleJob.run (n
+ode:internal/modules/es
+m/module_job:413:25)
+    at async onImport.t
+racePromise.__proto__ (
+node:internal/modules/e
+sm/loader:660:26)
+    at async asyncRunEn
+tryPointWithESMLoader (
+node:internal/modules/r
+un_main:101:5)
+
+Node.js v24.12.0
