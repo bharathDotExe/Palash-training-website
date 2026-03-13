@@ -173,7 +173,7 @@ export default function ForumPage() {
                             />
                         </div>
                         <button className="btn write-article-btn" onClick={() => setIsWriting(!isWriting)}>
-                            <PenSquare size={18} /> Write Article
+                            <PenSquare size={18} /> Write your own blog
                         </button>
                     </div>
 

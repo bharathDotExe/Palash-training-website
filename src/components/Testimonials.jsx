@@ -69,7 +69,7 @@ export default function Testimonials() {
             <div className="container">
                 <div className="th-header text-center">
                     <span className="th-eyebrow">Real Words. Real Results.</span>
-                    <h2 className="section-title">What Our <span className="text-gradient">Students Say</span></h2>
+                    <h2 className="section-title">What My <span className="text-gradient">Students Say</span></h2>
                     <p className="th-subtitle">
                         Authentic feedback from students, corporate professionals, and collaborators.
                     </p>

@@ -89,7 +89,7 @@ export default function ServicesHome() {
                 </div>
 
                 <div className="text-center" style={{ marginTop: '50px' }}>
-                    <Link to="/services" className="btn btn-outline">Explore All 8 Programs</Link>
+                    <Link to="/services" className="btn btn-outline">Explore All Programs</Link>
                 </div>
             </div>
         </section>
