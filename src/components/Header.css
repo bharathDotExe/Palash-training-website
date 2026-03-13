@@ -58,6 +58,9 @@
     gap: 8px;
     font-size: inherit;
     transition: color 0.2s;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .whatsapp-icon {
@@ -578,17 +581,28 @@
     }
 
     .top-contact-bar {
-        font-size: 0.82rem;
-        min-height: 36px;
-        padding: 0 4%;
+        font-size: 0.84rem;
+        min-height: 56px;
+        padding: 8px 4%;
+        flex-wrap: nowrap;
+        align-items: center;
     }
 
     .top-contact-bar .contact-left {
-        gap: 12px;
+        flex-wrap: wrap;
+        gap: 4px 12px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .top-contact-bar .contact-link.email {
+        width: 100%;
     }
 
     .top-contact-bar .contact-right {
         gap: 8px;
+        flex-shrink: 0;
+        align-self: center;
     }
 
     .whatsapp-icon {
@@ -627,12 +641,17 @@
 /* ── Small mobile (≤480px) ── */
 @media (max-width: 480px) {
     .top-contact-bar {
-        font-size: 0.75rem;
-        padding: 0 3%;
+        font-size: 0.78rem;
+        padding: 8px 3%;
+        min-height: 56px;
     }
 
     .top-contact-bar .contact-left {
-        gap: 8px;
+        gap: 4px 8px;
+    }
+
+    .top-contact-bar .contact-right {
+        gap: 6px;
     }
 
     .glass-pill {

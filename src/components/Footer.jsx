@@ -81,7 +81,7 @@ export default function Footer() {
                     <ul className="footer-contact">
                         <li><MapPin size={18} className="contact-icon" /> K R Puram, Bangalore, Karnataka, India</li>
                         <li><Phone size={18} className="contact-icon" /> +91 96408 16324</li>
-                        <li><Mail size={18} className="contact-icon" /> Palash.training@gmail.com</li>
+                        <li><a href="mailto:palash.training@gmail.com" style={{ color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }}><Mail size={18} className="contact-icon" /> Palash.training@gmail.com</a></li>
                     </ul>
                 </div>
             </div>

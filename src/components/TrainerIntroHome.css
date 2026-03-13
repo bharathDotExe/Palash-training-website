@@ -131,63 +131,241 @@
 
 .social-badges-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
     width: 100%;
-    margin-top: 30px;
-    align-items: stretch;
-    position: relative;
-    z-index: 1;
+    max-width: 1200px;
+    margin: 30px auto 0;
 }
 
-/* ── Animated Social Arrows ── */
-.social-arrow {
-    position: absolute;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.6;
+/* ── Social Card wrapper ── */
+.social-card {
+    background: var(--white, #fff);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 280px;
 }
 
-.social-arrow.arrow-1 {
-    top: 55px;
-    /* Roughly aligned with profile picture heights */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 30px;
+/* ── Testimonial Slideshow card (4th slot) ── */
+.social-testimonial-card {
+    background: linear-gradient(135deg, #fff5eb, #fff);
+    border: 1px solid rgba(249, 168, 37, 0.15);
 }
 
-.social-arrow.arrow-2 {
-    top: 130px;
-    /* Below the top cards */
-    right: 25%;
-    width: 40px;
-    height: 60px;
+.social-testimonial-inner {
+    text-align: center;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
 }
 
-.animated-line {
-    stroke-dashoffset: 0;
-    animation: marching-ants 1.5s linear infinite;
+.social-testimonial-icon {
+    color: var(--palash-orange, #f9a825);
+    opacity: 0.3;
+    flex-shrink: 0;
 }
 
-@keyframes marching-ants {
-    from {
-        stroke-dashoffset: 24;
-    }
-
-    to {
-        stroke-dashoffset: 0;
-    }
+.social-testimonial-text {
+    font-size: 0.95rem;
+    color: var(--text-dark, #333);
+    line-height: 1.7;
+    font-style: italic;
+    animation: fadeSlide 0.5s ease;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
 }
 
-/* Center all items in common container */
-.social-badges-container>* {
-    display: flex !important;
-    justify-content: center !important;
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.social-testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: fadeSlide 0.5s ease;
+}
+
+.social-testimonial-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--brand-gradient, linear-gradient(135deg, #f9a825, #e65100));
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.social-testimonial-name {
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--text-dark, #222);
+    line-height: 1.2;
+    text-align: left;
+}
+
+.social-testimonial-role {
+    font-size: 0.75rem;
+    color: var(--text-light, #777);
+    line-height: 1.3;
+    text-align: left;
+}
+
+.social-testimonial-source {
+    font-size: 0.72rem;
+    color: var(--text-light, #999);
+    background: rgba(0,0,0,0.04);
+    padding: 3px 10px;
+    border-radius: 50px;
+}
+
+.social-testimonial-dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.social-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.social-dot.active {
+    background: var(--palash-orange, #f9a825);
+    transform: scale(1.3);
+}
+
+.social-testimonial-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--palash-orange, #e65100);
+    text-decoration: none;
+    transition: gap 0.3s ease;
+}
+
+.social-testimonial-link:hover {
+    gap: 8px;
+}
+
+/* ── Blog Title Cards (left column) ── */
+.th-blog-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.th-blog-heading {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-dark, #222);
+    margin-bottom: 4px;
+}
+
+.th-blog-card {
+    padding: 18px 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.th-blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.th-blog-category {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--palash-orange, #e65100);
+    background: rgba(249, 168, 37, 0.1);
+    padding: 3px 10px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.th-blog-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark, #222);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.th-blog-meta {
+    font-size: 0.75rem;
+    color: var(--text-light, #888);
+}
+
+.th-blog-read-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, var(--palash-orange, #f9a825), #e65100);
+    padding: 7px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    width: fit-content;
+    margin-top: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.th-blog-read-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 81, 0, 0.3);
+    color: #fff;
+}
+
+/* Override child embed sizing to fill card */
+.social-card > * {
     width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    overflow: hidden !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+.social-card .th-badge-wrapper {
+    overflow: hidden;
+}
+
+.social-card iframe {
+    max-width: 100% !important;
+    width: 100% !important;
 }
 
 @media (max-width: 992px) {
@@ -208,23 +386,18 @@
 }
 
 @media (max-width: 768px) {
-    .social-arrows {
-        display: none;
+    .social-badges-container {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .social-card {
+        min-height: auto;
+        padding: 16px;
     }
 
     .social-arrow {
         display: none;
-    }
-
-    .social-badges-container {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 20px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
     }
 
     .th-experience-badge {
@@ -245,7 +418,8 @@
     .trainer-home-info .th-cta-group {
         flex-direction: column;
         width: 100%;
-        max-width: 400px;
+        max-width: 340px;
+        padding: 0 16px;
     }
 
     .trainer-home-info .th-cta-group .btn {
@@ -253,12 +427,28 @@
         justify-content: center;
     }
 
-    /* Override LinkedIn Badge centering on mobile to fill width nicely */
     .trainer-home-info .badge-base {
         margin: 0 auto;
     }
 
     .trainer-home-image-col {
         order: -1;
+    }
+
+    .th-blog-cards {
+        margin-top: 20px;
+    }
+
+    .th-blog-heading {
+        text-align: center;
+    }
+
+    .th-blog-card {
+        padding: 16px;
+    }
+
+    .social-testimonial-text {
+        font-size: 0.88rem;
+        min-height: 60px;
     }
 }

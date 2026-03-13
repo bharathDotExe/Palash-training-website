@@ -423,6 +423,22 @@
 }
 
 /* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .sp-story-image.float-right,
+    .sp-story-image.float-left {
+        float: none;
+        display: block;
+        margin: 24px auto;
+        width: 100%;
+        max-width: 450px;
+        transform: rotate(0deg);
+    }
+
+    .sp-story-card {
+        padding: 36px 32px;
+    }
+}
+
 @media (max-width: 960px) {
     .sp-video-grid {
         grid-template-columns: 1fr;
