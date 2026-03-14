@@ -8,16 +8,15 @@ export default function Hero({ onBookDemo }) {
     const audioRef = useRef(null);
 
     const slides = [
-        '/slide1.jpg',
-        '/slide2.png',
-        '/slide3.jpg',
-        '/slide4.png'
+        '/palash-slide1.png',
+        '/palash-slide2.png',
+        '/palash-slide3.png',
     ];
 
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 2500); // 2.5 seconds gap
+        }, 5000); // 5 seconds gap
         return () => clearInterval(timer);
     }, [slides.length]);
 

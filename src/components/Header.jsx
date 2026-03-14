@@ -128,7 +128,7 @@ export default function Header({ onBookDemo }) {
           <nav className={`glass-pill${isScrolled ? ' scrolled' : ''}`}>
             {/* Logo */}
             <Link to="/" className="logo-container" onClick={closeMobileMenu}>
-              <img src="/logo.png" alt="Palash Logo" className="logo-img" />
+              <img src="/logo (2).png" alt="Palash Logo" className="logo-img" />
               <div className="logo-text-block">
                 <span className="logo-text">PALASH <span>Training</span></span>
                 <span className="logo-sub"><b><i>Transforming you..Silence to Confidence</i></b></span>

@@ -7,10 +7,13 @@ export default function Footer() {
         <footer className="footer-wrapper">
             <div className="container footer-content">
                 <div className="footer-col branding-col">
-                    <div className="logo-placeholder">
-                        <span className="logo-text" style={{ color: '#e95524' }}>PALASH <span style={{ color: '#e95524' }}>Training</span></span>
-                        <span className="logo-sub" style={{ color: 'var(--glass-border)' }}><b><i>Transforming you..Silence to Confidence</i></b></span>
-                    </div>
+                    <Link to="/" className="logo-container" onClick={() => window.scrollTo(0, 0)} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
+                        <img src="/logo (2).png" alt="Palash Logo" style={{ height: '50px', width: 'auto' }} />
+                        <div className="logo-text-block">
+                            <span className="logo-text" style={{ color: '#e95524', fontSize: '1.2rem', fontWeight: 700 }}>PALASH <span style={{ color: '#e95524' }}>Training</span></span>
+                            <span className="logo-sub" style={{ color: 'var(--glass-border)', fontSize: '0.8rem', display: 'block' }}><b><i>Transforming you..Silence to Confidence</i></b></span>
+                        </div>
+                    </Link>
                     <p className="footer-bio">Empowering the next generation with modern, effective language and communication skills.</p>
                     <div className="social-icons">
                         {/* LinkedIn */}
