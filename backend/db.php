@@ -4,9 +4,9 @@
 // Replace these values with your MilesWeb cPanel details
 // =====================================================
 define('DB_HOST', 'localhost');       // Usually 'localhost' on MilesWeb
-define('DB_USER', 'bharath3305');    // cPanel Database username
-define('DB_PASS', 'Bha2006@111');// cPanel Database password
-define('DB_NAME', 'palash_training');    // Database name you created in cPanel
+define('DB_USER', 'palashtr1_bharath3305');    // cPanel Database username (with prefix)
+define('DB_PASS', 'Bha2006@111');         // cPanel Database password
+define('DB_NAME', 'palashtr1_palash_training'); // Database name (with cPanel prefix)
 
 function getConnection() {
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
